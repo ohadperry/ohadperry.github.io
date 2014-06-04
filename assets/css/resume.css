@@ -1,0 +1,316 @@
+
+body{
+    background: url('../images/coolbg.jpg');
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+    font-family:"Oswald";
+    src: url('../fonts/Oswald-Regular.ttf');
+}
+
+h1 {
+    color: white;
+    font-family: "Humnst777 Blk BT";
+}
+
+h2 {
+    color: #E6E6E6;
+    font-family: "Humnst777 Blk BT";
+}
+h3{
+    color: #E42B48;
+    font-family: Helvetica, sans-serif;
+}
+
+h5 {
+    color: #142950;
+    font-family: 'Oswald';
+    font-weight: normal;
+    font-size: 1em;
+}
+
+h6{
+    font-family: Tahoma, Geneva, sans-serif;
+    color: #545454;
+    font-weight: normal;
+}
+
+a {
+    color: #42547B;
+}
+
+a:hover {
+    color:#000;
+}
+
+.printwrrper {
+    float: right;
+    margin-right: 20%;
+    background: white;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.printlink{
+    padding: 0 20px;
+}
+
+
+.rightSide{
+    float: right;
+    width: 40%;
+}
+
+.leftSide{
+    float: right;
+    width: 60%;
+}
+
+.ContactLeft{
+    float: left;
+    width: 55%;
+}
+
+.ContactRight{
+    float: left;
+    width: 40%;
+    padding: 5px;
+
+}
+.ResumeContentText{
+    overflow: hidden;
+}
+
+.profileImage{
+    margin: 0 auto;
+    border-radius: 10px;
+    width: 90%;
+}
+.contact_Info_items ul li {
+    list-style: none;
+    line-height: 18px;
+    font-size: 12px;
+    padding-left: 30px;
+    margin-bottom: 12px;
+}
+
+#ResumeProfile ul li, #ResumeAchievments ul li{
+    background: url("../images/list_item.png") no-repeat transparent;
+    line-height: 18px;
+    list-style: none outside none;
+    padding-left: 18px;
+}
+
+.ResumeExperienceJobDescb ul li {
+    background: url("../images/arrowRight.png") no-repeat transparent;
+    line-height: 25px;
+    list-style: none outside none;
+    padding-left: 18px;
+}
+
+.msg_icon {
+    background: url('../images/msg-big.png') no-repeat;
+}
+
+.cell {
+    background: url("../images/cell.png") no-repeat;
+}
+
+.locate_icon {
+    background: url('../images/locate-big.png') no-repeat;
+}
+
+.linkedin_icon{
+    background: url('../images/linkedin.png') no-repeat;
+}
+
+
+
+#ResumeContainer{
+    width: 70%;
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px gray;
+    border: 1px solid #000000;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0);
+}
+
+.header {
+    background: #3B3C3E url('../images/bg-pattern.jpg');
+    border-bottom: 5px solid black;
+}
+
+.header {
+    width: 100%;
+    height: 149px;
+    margin: 0 auto;
+    line-height: 35px;
+}
+
+.headerwrapper {
+    width: 850px;
+    display: block;
+    margin: 0 auto;
+    padding: 36px 0 0 0;
+    height: 113px;
+}
+
+.ResumeItem{
+    margin: 0;
+    width:95%;
+}
+.ResumeContentTitle{
+
+    border: 1px solid black;
+    background: gray;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px gray;
+    cursor: pointer;
+    margin:0 0 10px 0;
+
+}
+
+.ResumeContentTitle:hover{
+    background: darkslategray;
+    text-shadow: 1px 1px 1px orangered;
+}
+
+
+
+.ResumeExperienceJobDescb{
+    width: 100%;
+    float: left;
+    padding-bottom: 2em;
+}
+
+.ResumeReferenceHeader{
+    cursor: pointer;
+    margin-top: 2em;
+}
+
+
+
+.ResumeReferenceDescbHebrew{
+    direction: rtl;
+}
+
+#ResumeContainer ul li{
+    list-style: none;
+    line-height: 18px;
+    font-size: 12px;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    font-style: italic;
+
+}
+
+
+.ResumeExperienceJobHeader{
+    float: right;
+}
+.ResumeExperienceJobDescbHeader{
+    float: left;
+}
+
+#ResumeEducation h6, #ResumeReference h6{
+    color: black;
+}
+
+
+
+.ResumeKnowledgeImage{
+
+    height: 40px;
+    width: 55px;
+    max-height: 40px;
+    max-width: 55px;
+
+}
+
+.work_logo{
+
+    padding: 2px 4px 2px 4px;
+    float: left;
+}
+
+
+.title_logo{
+
+    padding: 2px 10px 2px 4px;
+    float: left;
+}
+.skills {
+    float: left;
+    width: 45%;
+    padding: 0 0 25px 0;
+
+}
+
+.skills ul.leftul{
+    float: left;
+    margin-right: 5px;
+}
+
+.skills ul.rightul{
+    float: left;
+
+}
+
+.skills ul li {
+    float: left;
+    display: block;
+    clear: both;
+    padding: 0;
+    margin: 0;
+    line-height: 23px;
+    list-style: none;
+
+}
+
+
+.skills li{
+    background-color:#caced7;
+    padding:2px 5px !important;
+    margin:4px 0 !important;
+    color: #333;
+    border-radius: 5px;
+}
+.skills li:hover{
+    background-color:#1f3862;
+    color:#fff;
+}
+
+.rounded{
+    border-radius: 8px;
+}
+
+.Squash{
+    /*writing-mode:tb-rl;*/
+    /*-webkit-transform:rotate(90deg);*/
+    /*-moz-transform:rotate(90deg);*/
+    /*-o-transform: rotate(90deg);*/
+    /*filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=4);*/
+    transition: height 2s;
+    -moz-transition: height 2s; /* Firefox 4 */
+    -webkit-transition: height 2s; /* Safari and Chrome */
+    -o-transition: height 2s; /* Opera */
+    position: fixed;
+    top: 50%;
+    left: 95%;
+    width: 50px;
+    height: 200px;
+
+}
+
+.Squash:hover{
+
+    height: 400px;
+    top: 40%;
+}
+
+
+

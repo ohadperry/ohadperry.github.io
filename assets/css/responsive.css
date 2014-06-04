@@ -1,0 +1,51 @@
+@media screen and (max-width: 870px){
+    .rightSide {
+        clear: both;
+        width: 100%
+    }
+
+    .leftSide {
+        width: 100%
+    }
+
+    .ResumeKnowledgeImage{
+
+        height: 40px;
+        width: 70px;
+        max-height: 40px;
+        max-width: 70px;
+
+    }
+}
+
+@media only screen and (max-device-width: 480px) {
+
+    .rightSide {
+        clear: both;
+        width: 100%;
+    }
+
+    .leftSide {
+        width: 100%;
+    }
+
+    .Squash{
+        display: none;
+    }
+
+    .ResumeKnowledgeImage{
+
+        height: 40px;
+        width: 70px;
+        max-height: 40px;
+        max-width: 70px;
+
+    }
+
+}
+
+@media print {
+    body {
+        background-color: white;
+    }
+}
