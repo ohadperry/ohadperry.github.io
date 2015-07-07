@@ -1,54 +1,100 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <title>Jquery Backoffice Filters Plugin</title>
+    <meta name="description" content="A jquery plugin for generating a backoffice filter">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="http://momentjs.com/downloads/moment.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="https://cdn.rawgit.com/dangrossman/bootstrap-daterangepicker/master/daterangepicker.js"></script>
-    <script src="https://cdn.rawgit.com/ohadpartuck/jquery-filters-plugin/v0.0.2/jquery.filters.js" type="text/javascript"></script>
-
+    <script src="https://cdn.rawgit.com/ohadpartuck/jquery-filters-plugin/v0.0.3/jquery.filters.js" type="text/javascript"></script>
+    <link rel="stylesheet" media="all" href="https://cdn.rawgit.com/ohadpartuck/ohadpartuck.github.io/master/filter_demo/css/docs.min.css">
     <link rel="stylesheet" media="all" href="https://cdn.rawgit.com/dangrossman/bootstrap-daterangepicker/master/daterangepicker-bs3.css">
     <link rel="stylesheet" media="all" href="https://cdn.rawgit.com/ohadpartuck/jquery-filters-plugin/master/css/improvely.css">
+    <link rel="stylesheet" media="all" href="https://cdn.rawgit.com/ohadpartuck/ohadpartuck.github.io/master/filter_demo/css/documenter_style.css">
+    <link rel="stylesheet" media="all" href="https://cdn.rawgit.com/ohadpartuck/ohadpartuck.github.io/master/filter_demo/css/prettify.css">
     <link rel="stylesheet" media="all" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
 <body>
 <div id="wrapper">
-    <div id="filter"></div>
+    <div id="page-wrapper" class="container">
+        <div id="wrapper2">
+            <h1>Simple Example</h1>
+            <div id="filter"></div>
+        </div>
+    </div>
 </div>
-
 </body>
 <script type="text/javascript">
     function sendToServer(data){
         alert('sending params to server: ' + JSON.stringify(data));
     }
-
-    var devicesOptions = [{name: 'LGE', value: 'LGE'}, {name: 'Apple', value: 'Apple'}, {name: 'Samsung', value: 'Samsung'}],
+    var devicesOptions = [
+                {name: 'LGE', value: 'server_id1_value'},
+                {name: 'Apple', value: 'server_id2_value'},
+                {name: 'Samsung', value: 'server_id3_value'}],
             productOptions = [
-                {name: 'Product Name 1', value: 'product_name_1', selected: true},
+                {name: 'Product Name 1', value: 'product_name_1', selected: true}, //selected on display
                 {name: 'Product Name 2', value: 'product_name_2'},
                 {name: 'Product Name 3', value: 'product_name_3'},
                 {name: 'Product Name 4', value: 'product_name_4'},
                 {name: 'Product Name 5', value: 'product_name_5'},
                 {name: 'Product Name 6', value: 'product_name_6'},
             ],
+            filter1Options = [
+                {name: 'Filter 1 Option 1', value: 'server_id1_value', date: "22-05-2015"},
+                {name: 'Filter 1 Option 2', value: 'server_id2_value', date: "22-06-2015"},
+                {name: 'Filter 1 Option 3', value: 'server_id3_value', date: "22-06-2015"},
+                {name: 'Filter 1 Option 4', value: 'server_id4_value', date: "22-06-2015"},
+                {name: 'Filter 1 Option 5', value: 'server_id5_value', date: "22-03-2015"},
+                {name: 'Filter 1 Option 6', value: 'server_id6_value', date: "22-02-2015"},
+                {name: 'Filter 1 Option 7', value: 'server_id7_value', date: "22-02-2015"},
+                {name: 'Filter 1 Option 8', value: 'server_id8_value', date: "22-01-2015"}],
+            operatingSystemOptions = [
+                {name: 'ios', value: 'ios'},
+                {name: 'android', value: 'android'},
+                {name: 'windows', value: 'windows'},
+            ],
+            filter2Options = [
+                {name: 'yes', value: true},
+                {name: 'no', value: false}
+            ],
+            filter3Options = [
+                {name: 'Filter 3 Option 1', value: 'server_id1_value', date: "22-06-2015"},
+                {name: 'Filter 3 Option 2', value: 'server_id2_value', date: "22-06-2015"},
+                {name: 'Filter 3 Option 3', value: 'server_id2_value', date: "22-07-2015"},
+                {name: 'Filter 3 Option 4', value: 'server_id3_value', date: "22-03-2015"},
+                {name: 'Filter 3 Option 5', value: 'server_id4_value', date: "22-03-2015"},
+                {name: 'Filter 3 Option 6', value: 'server_id5_value', date: "22-03-2014"},
+                {name: 'Filter 3 Option 7', value: 'server_id6_value', date: "22-03-2012"},
+                {name: 'Filter 3 Option 8', value: 'server_id7_value', date: "22-02-2015"}],
+            filter4Options = [
+                {name: 'Filter 4 Option 1', value: 'server_id1_value'},
+                {name: 'Filter 4 Option 2', value: 'server_id2_value'},
+                {name: 'Filter 4 Option 3', value: 'server_id3_value'},
+                {name: 'Filter 4 Option 4', value: 'server_id4_value'}
+            ],
             operatingSystemVersionOptions = [
-                {name: '8.1 (ios)', value: '8.1'},
-                {name: '8.2 (ios)', value: '8.2'},
-                {name: '5.5 (kitkat)', value: '5.5'}
+                {name: '8.1 (ios)', value: 'server_id1_value'},
+                {name: '8.2 (ios)', value: 'server_id2_value'},
+                {name: '5.5 (kitkat)', value: 'server_id3_value'}
             ],
             options = {
                 title: 'Simple Filter',
+                dateFormat: this.dateFormat,
                 searchClickedCallback: sendToServer,
                 filterParameters: [
                     {type: 'text', attributeName: 'subject_id', name: 'Object ID', placeholder: 'placeholder text here'},
                     {type: 'date-range', attributeName: 'date_range', name: 'Date Range'},
                     {type: 'single', attributeName: 'productName',name: 'Product', options: productOptions},
+                    {type: 'single',  attributeName: 'operating_system', name: 'Operating System', options: operatingSystemOptions},
+                    {type: 'multi', attributeName: 'filter_1', name: 'Filter 1', options: filter1Options},
+                    {type: 'single', attributeName: 'filter_2', name: 'Filter 2', options: filter2Options},
                     {type: 'multi', attributeName: 'deviceName',name: 'Manufacturer', options: devicesOptions},
+                    {type: 'multi', attributeName: 'filter_3', name: 'Filter 3', options: filter3Options},
+                    {type: 'multi', attributeName: 'filter4',name: 'Filter 4', options: filter4Options},
+                    {type: 'multi', attributeName: 'operating_system_version', name: 'Operating System Options', options: operatingSystemVersionOptions},
                 ]
             };
-
     $('#filter').bootstrapFilter(options);
-
 </script>
-
-</html>
+</html>​​
