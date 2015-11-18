@@ -1,3 +1,9 @@
 .new-header{
     padding: 30px 0 !important;
 }
+
+.demo-image{
+    height:500px;
+    margin: 0 auto;
+    display: block;
+}
