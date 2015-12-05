@@ -73,8 +73,8 @@
                 metrics:'rt:activeUsers'
             }).then(function(response) {
                 var activeUsers = parseInt(response.result.rows[0]);
-                if (activeUsers > 0){
-                   $('#active-users').html('Active Users Right Now: <span>'+activeUsers+'</span>')
+                if (activeUsers > 1){
+                   $('#active-users').html('Active Users Right Now: <span class="views-span">'+activeUsers+'</span>')
                 }else{
                     console.log('no active users right now')
                 }
