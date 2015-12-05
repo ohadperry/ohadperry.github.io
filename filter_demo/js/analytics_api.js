@@ -24,11 +24,11 @@
         authorize: function(event) {
             // Handles the authorization flow.
             // `immediate` should be false when invoked from the button click.
-            var useImmdiate = event ? false : true;
+            //var useImmdiate = event ? false : true;
             var authData = {
                 client_id: AnalyticsAPI.CLIENT_ID,
                 scope: AnalyticsAPI.SCOPES,
-                immediate: useImmdiate
+                immediate: true
             };
 
             gapi.auth.authorize(authData, function(response) {
