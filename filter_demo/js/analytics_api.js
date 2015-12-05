@@ -29,7 +29,7 @@
                 client_id: AnalyticsAPI.CLIENT_ID,
                 scope: AnalyticsAPI.SCOPES,
                 immediate: true,
-                cookie_policy: 'single_host_origin'
+                g_user_cookie_policy: 'single_host_origin'
             };
 
             gapi.auth.authorize(authData, function(response) {
