@@ -54,6 +54,7 @@
                 'metrics': 'ga:pageviews'
             })
             .then(function(response) {
+                $('#google-analytics-stats').show();
                 if (7 == daysAgo){
                     $('#pageviews-last-week').text(response.result.rows[0]);
                 }else if (30 == daysAgo){
