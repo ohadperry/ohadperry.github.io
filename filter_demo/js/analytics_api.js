@@ -38,6 +38,7 @@
                 else {
                     AnalyticsAPI.queryCoreReportingApi('bla', 7);
                     AnalyticsAPI.queryCoreReportingApi('bla', 30);
+                    AnalyticsAPI.queryRealTimeApi('bla');
                 }
             });
         },
@@ -63,6 +64,27 @@
                 console.log(err);
             });
         },
+
+        queryRealTimeApi: function(profileId) {
+            // Query the Core Reporting API for the number page views for
+            // the past seven days.
+            gapi.client.analytics.data.realtime.get({
+                ids:'ga:104744699',
+                metrics:'rt:activeUsers'
+            }).then(function(response) {
+                var activeUsers = parseInt(response.result.rows[0]);
+                if (activeUsers > 0){
+                   $('#active-users').html('Active Users Right Now: <span>'+activeUsers+'</span>')
+                }else{
+                    console.log('no active users right now')
+                }
+
+            }).then(null, function(err) {
+                // Log any errors.
+                console.log(err);
+            });
+        },
+
 
     };
 
