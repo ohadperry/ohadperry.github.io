@@ -23,6 +23,7 @@
   "homepage": "ohadpartuck.github.io/solve-my-problem",
   "dependencies": {
     "bootstrap": "^3.3.5",
-    "jquery": "^2.1.4"
+    "jquery": "^2.1.4",
+    "knockout": "^3.4.0"
   }
 }
