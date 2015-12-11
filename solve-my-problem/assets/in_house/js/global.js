@@ -5,23 +5,27 @@ $(function() {
 
         init: function () {
 
-            //all init data
             Global.bindFaqClick();
-        },
-
-        init1: function(){
-            p('initiated the foo and the bar, happy.');
-
+            Global.bindFormSubmit();
         },
 
         //open faq popup on click
         bindFaqClick: function(){
-           $('#why-link').on('click', function(){
+           $('.why-link-js').on('click', function(){
                BootstrapDialog.alert({
                    title: 'faq',
                    message: $('<div></div>').load('templates/faq.html.erb')
                });
            });
+        },
+
+        bindFormSubmit: function(){
+            $('.solve-it-js').on('click', function(){
+                //TODO data validation
+                //TODO send the data
+                //after data sent confirmation, change to the thank you page
+
+            });
         }
     };
 
