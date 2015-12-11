@@ -31,7 +31,17 @@ $(function() {
     window.Sammy = Sammy;
 
     $(document).ready(function() {
-        Sammy.init();
+        function initSammy() {
+            if ($.sammy == undefined) {
+                console.log('sammy not ready yet');
+                setTimeout(check, 200);
+            }else{
+                console.log('sammy is ready');
+                Sammy.init();
+            }
+        }
+
+        initSammy()
     });
 
 });
