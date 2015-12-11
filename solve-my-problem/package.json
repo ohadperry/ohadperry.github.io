@@ -1,0 +1,28 @@
+{
+  "name": "solve-my-problem",
+  "version": "1.0.0",
+  "description": "A website that matches people's problems with their solutions",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ohadpartuck/ohadpartuck.github.io/"
+  },
+  "keywords": [
+    "problems",
+    "solve my problems",
+    "daily issues"
+  ],
+  "author": "ohad perry",
+  "license": "MIT",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "ohadpartuck.github.io/solve-my-problem",
+  "dependencies": {
+    "bootstrap": "^3.3.5",
+    "jquery": "^2.1.4"
+  }
+}
