@@ -1,7 +1,7 @@
 <html>
 <head>
     <!-- TODO Favicon -->
-    <!--<link rel="shortcut icon" type="image/x-icon" href="cv/assets/images/head_shot.jpeg">-->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/in_house/images/favicon-solution.png">
 
     <title>Solve My Problem</title>
     <meta name="description" content="Matches people's problems with Solutions">
@@ -9,49 +9,56 @@
                                     make my problem go away">
     <meta name="author" content="Ohad Perry, Shay Shafranek">
 
-
     <link rel="stylesheet" media="all"
-          href="assets/vendors/node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
-
-
+          href="assets/vendors/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" media="all"
+          href="assets/vendors/node_modules/bootstrap-dialog/dist/css/bootstrap-dialog.min.css">
+    <link rel="stylesheet" media="all"
+          href="assets/in_house/css/main.css">
 
 </head>
 <body>
-    <h1>What Is Your Problem?!</h1>
-    <h2>No, really. We want to know.</h2>
-    <h2>My biggest problem is</h2>
-    <textarea></textarea>
-    <br/>
-    <span>I would pay </span> <input type="text"/> <span>$</span>
-    <input type="text"/> <span>to solve it.</span>
-    <br/>
-    <span>Send the solution here (email):</span><input type="text">
-    <br/>
-    <a>Solve it for me</a>
+    <div id="main-block" class="container center-block">
+        <h1>What Is Your Problem?!</h1>
+        <h2>No, really. We want to know.</h2>
+        <label for="comment">My biggest problem is:</label>
+        <textarea class="form-control" rows="2" id="comment"></textarea>
+        <br/>
+        <span>I would pay </span> <input type="text"/> <span>$</span>
+        <select>
+            <option value="Monthly">Monthly</option>
+            <option value="Lifetime">Lifetime</option>
+        </select> <span>to solve it.</span>
+        <br/>
+        <br/>
+        <span>Send the solution here (email):</span><input type="email" required />
+        <br/>
+        <a class="btn btn-success solve-it-js solve-it-btn">Solve it for me</a>
 
-    <br/>
-    <br/>
+        <br/>
+        <br/>
 
-    <h2>Why should you tell us your problem?</h2>
-    <h3>Because we care. We want to solve your problem and make <br/>
-        you a happy person.<br/> It's a win win for us and you.</h3>
+        <h2>Why should you tell us your problem?</h2>
+        <h3>Because we care. We want to solve your problem and make <br/>
+            you a happy person.<br/> It's a win win for us and you.</h3>
 
-    <h2>Do I have to pay something when you solve my problem?</h2>
-    <h3>Absolutely not. When we suggest you with a solution,<br/>
-        can choose to do what ever you want with it.</h3>
+        <h2>Do I have to pay something when you solve my problem?</h2>
+        <h3>Absolutely not. When we suggest you with a solution,<br/>
+            can choose to do what ever you want with it.</h3>
 
-    <h1>Awesome!</h1>
-    <h2>We'll do our best to come up with<br/>
-        the best solution for you.</h2>
+        <h1>Awesome!</h1>
+        <h2>We'll do our best to come up with<br/>
+            the best solution for you.</h2>
 
-    <h2>In the mean while - have a coffee, take a break or <br/>
-        <a href="#">submit</a> another thing you want us to solve.</h2>
-
+        <h2>In the mean while - have a coffee, take a break or <br/>
+            <a href="#">submit</a> another thing you want us to solve.</h2>
+    </div>
 </body>
 
 <!--bootstrap, jquery, knockout frameworks -->
 <script src="assets/vendors/node_modules/jquery/dist/jquery.min.js"></script>
 <script src="assets/vendors/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="assets/vendors/node_modules/bootstrap-dialog/dist/js/bootstrap-dialog.min.js"></script>
 <script src="assets/vendors/node_modules/knockout/build/output/knockout-latest.js"></script>
 
 <!--Google Analytics-->
