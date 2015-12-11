@@ -34,7 +34,7 @@ $(function() {
         function initSammy() {
             if ($.sammy == undefined) {
                 console.log('sammy not ready yet');
-                setTimeout(check, 200);
+                setTimeout(initSammy, 200);
             }else{
                 console.log('sammy is ready');
                 Sammy.init();
