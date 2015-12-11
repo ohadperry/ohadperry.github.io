@@ -18,41 +18,29 @@
 
 </head>
 <body>
+
     <div id="main-block" class="container center-block">
         <h1>What Is Your Problem?!</h1>
         <h2>No, really. We want to know.</h2>
-        <label for="comment">My biggest problem is:</label>
-        <textarea class="form-control" rows="2" id="comment"></textarea>
-        <br/>
-        <span>I would pay </span> <input type="text"/> <span>$</span>
-        <select>
-            <option value="Monthly">Monthly</option>
-            <option value="Lifetime">Lifetime</option>
-        </select> <span>to solve it.</span>
-        <br/>
-        <br/>
-        <span>Send the solution here (email):</span><input type="email" required />
-        <br/>
-        <a class="btn btn-success solve-it-js solve-it-btn">Solve it for me</a>
-
-        <br/>
-        <br/>
-
-        <h2>Why should you tell us your problem?</h2>
-        <h3>Because we care. We want to solve your problem and make <br/>
-            you a happy person.<br/> It's a win win for us and you.</h3>
-
-        <h2>Do I have to pay something when you solve my problem?</h2>
-        <h3>Absolutely not. When we suggest you with a solution,<br/>
-            can choose to do what ever you want with it.</h3>
-
-        <h1>Awesome!</h1>
-        <h2>We'll do our best to come up with<br/>
-            the best solution for you.</h2>
-
-        <h2>In the mean while - have a coffee, take a break or <br/>
-            <a href="#">submit</a> another thing you want us to solve.</h2>
+        <form id="problem-form" class="col-lg-5 col-lg-offset-4">
+            <label for="comment">My biggest problem is:</label>
+            <textarea class="form-control" rows="2" id="comment"></textarea>
+            <br/>
+            <span>I would pay </span> <input type="text"/> <span>$</span>
+            <select>
+                <option value="Monthly">Monthly</option>
+                <option value="Lifetime">Lifetime</option>
+            </select> <span>to solve it.</span>
+            <br/>
+            <br/>
+            <span id="send-solution-text">Send the solution here (email):</span><input type="email" required />
+            <div class="clearfix"></div>
+            <a id="solve-it-btn" class="btn btn-success solve-it-js  pull-right">Solve it for me</a>
+        </form>
+        <div class="clearfix"></div>
+        <a href="#" id="why-link" class="pull-left">Why should I tell you?</a>
     </div>
+
 </body>
 
 <!--bootstrap, jquery, knockout frameworks -->
@@ -60,6 +48,7 @@
 <script src="assets/vendors/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="assets/vendors/node_modules/bootstrap-dialog/dist/js/bootstrap-dialog.min.js"></script>
 <script src="assets/vendors/node_modules/knockout/build/output/knockout-latest.js"></script>
+<script src="assets/in_house/js/global.js"></script>
 
 <!--Google Analytics-->
 <script>

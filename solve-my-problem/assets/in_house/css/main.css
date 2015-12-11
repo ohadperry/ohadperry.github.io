@@ -1,3 +1,37 @@
 #main-block{
+    margin-top: 80px;
+    text-align: center;
+}
+
+#problem-form{
+    text-align: left;
+}
+
+
+#solve-it-btn{
+   margin-top: 20px;
+}
+
+#send-solution-text{
+    margin-right: 10px;
+}
+
+#why-link{
+    margin-left: 50px;
+    font-size: 10px;
+}
+
+
+#faq{
+
+}
+
+
+.faq-question{
+    color: darkgreen;
+    font-size: 30px;
+}
+
+#thank-you-page{
     text-align: center;
 }

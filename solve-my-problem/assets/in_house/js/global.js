@@ -5,14 +5,23 @@ $(function() {
 
         init: function () {
 
-
             //all init data
-            Global.init1();
+            Global.bindFaqClick();
         },
 
         init1: function(){
             p('initiated the foo and the bar, happy.');
 
+        },
+
+        //open faq popup on click
+        bindFaqClick: function(){
+           $('#why-link').on('click', function(){
+               BootstrapDialog.alert({
+                   title: 'faq',
+                   message: $('<div></div>').load('templates/faq.html.erb')
+               });
+           });
         }
     };
 
