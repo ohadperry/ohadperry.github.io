@@ -10,11 +10,11 @@ $(function() {
             Parse.initialize("2dFgWLAPHrXIBU3SQ7I1j3q0ErhR0UcbIMNXg3LP",
                 "qe0M53EBz8dZJGfpmWG4N67zWsmtayKhbO6CPKOg");
 
-            var query = new Parse.Query(Parse.Problem);
+            var query = new Parse.Query('Problem');
             query.find({
-                success: function(users) {
-                    for (var i = 0; i < users.length; ++i) {
-                        console.log(users[i].get('username'));
+                success: function(problems) {
+                    for (var i = 0; i < problems.length; ++i) {
+                        console.log(problems[i].attributes);
                     }
                 }
             });

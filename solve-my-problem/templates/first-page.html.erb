@@ -1,25 +1,38 @@
-<h1>What Is Your Problem?!</h1>
-<h2>No, really. We want to know.</h2>
-<form id="problem-form" class="col-lg-5 col-lg-offset-4">
-  <label for="problem-description">My biggest problem is:</label>
-  <span id="error-problem-description" class="error-text"></span>
-  <textarea id="problem-description" class="form-control" rows="2"></textarea>
-  <br/>
-  <span id="error-amount" class="error-text"></span>
-  <span>I would pay </span> <input id="amount" type="text"/> <span>$</span>
-  <select>
-    <option value="Monthly">Monthly</option>
-    <option value="Lifetime">Lifetime</option>
-  </select> <span>to solve it.</span>
-  <br/>
-  <br/>
-  <span id="error-email" class="error-text"></span>
-  <div class="clearfix"></div>
-  <span id="send-solution-text">Send the solution here (email):</span><input id="email" type="email" required />
-  <div class="clearfix"></div>
-  <a id="solve-it-btn" class="btn btn-success solve-it-js  pull-right">Solve it for me</a>
-</form>
-<div class="clearfix"></div>
-<div id="footer" class="col-lg-5 col-lg-offset-4">
-  <a href="#" id="why-link" class="pull-left why-link-js">Why should I tell you?</a>
-</div>
+
+    <h1>What Is Your Problem?!</h1>
+    <h2>No, really. We want to know.</h2>
+    <form id="problem-form" class="col-lg-5 col-lg-offset-4">
+      <label for="problem-description">My biggest problem is:</label>
+      <span id="error-problem-description" class="error-text"></span>
+      <textarea id="problem-description" class="form-control" rows="2">problem1</textarea>
+      <div class="clearfix"></div>
+      <br/>
+
+      <span id="error-amount" class="error-text"></span>
+      <span>I would pay </span>
+      <input id="amount" type="text" value="10"/>
+      <span>$</span>
+      <select id="payment-type">
+        <option value="Monthly">Monthly</option>
+        <option value="Lifetime">Lifetime</option>
+      </select>
+      <span>to solve it.</span>
+      <div class="clearfix"></div>
+      <br/>
+
+      <span id="error-email" class="error-text"></span>
+      <div class="clearfix"></div>
+      <span id="send-solution-text">Send the solution here (email):</span>
+      <input id="email" type="email" required  value="ohadpartuck@gmail.com"/>
+      <div class="clearfix"></div>
+
+      <a id="solve-it-btn"
+         class="btn btn-success solve-it-js  pull-right">
+        Solve it for me</a>
+
+    </form>
+    <div class="clearfix"></div>
+
+    <div id="footer" class="col-lg-5 col-lg-offset-4">
+      <a href="#" id="why-link" class="pull-left why-link-js">Why should I tell you?</a>
+    </div>
