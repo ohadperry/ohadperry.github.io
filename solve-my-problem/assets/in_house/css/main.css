@@ -21,15 +21,12 @@ textarea {
 }
 
 #why-link{
-    margin-left: 50px;
     font-size: 10px;
 }
 
 .error-text{
     color: red;
 }
-
-
 
 .faq-question{
     color: darkgreen;
