@@ -24,6 +24,14 @@ $(function() {
                 Global.formSubmit()
             });
 
+            $('#problem-form').bind('keypress', function(e) {
+                var code = e.keyCode || e.which;
+                if(code == 13) { //'Enter' keycode
+                    Global.formSubmit();
+                }
+
+            });
+
             //TODO - also submit on 'enter' key
         },
 
