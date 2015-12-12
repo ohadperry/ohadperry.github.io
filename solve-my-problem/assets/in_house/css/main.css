@@ -1,3 +1,7 @@
+textarea {
+    resize: none;
+}
+
 #main-block{
     margin-top: 80px;
     text-align: center;
@@ -26,14 +30,10 @@
 }
 
 
-#faq{
-
-}
-
 
 .faq-question{
     color: darkgreen;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 #thank-you-page{
