@@ -2,21 +2,54 @@
         <div id="feedback">
              <p>Feedback SideProjects</p>
              <p>נשמח לשמוע ממך עוד</p>
-             <p>הצעות, שאלות, מענות וכל מה שבא לך לכתוב. תודה!!!</p>
 
-          <span id="error-integer-feedback" class="error-text"></span>
+
+          <span id="error-buyer-sellers" class="error-text"></span>
           <div class="clearfix"></div>
-          <div id="integer-feedback" class="pull-right">
-            <input type="radio" name="feedback-radio" value="1" class="radio-feedback">
-            <input type="radio" name="feedback-radio" value="2" class="radio-feedback">
-            <input type="radio" name="feedback-radio" value="3" class="radio-feedback">
-            <input type="radio" name="feedback-radio" value="4" class="radio-feedback">
-            <input type="radio" name="feedback-radio" value="5" class="radio-feedback">
+          <div id="buyer-sellers">
+            <p>
+              מה יותר סביר, שתרצה לצרף אנשים לרעיון שלך או שתצטרף לרעיון של מישהו אחר?
+            </p>
+            <div class="radio">
+              <label><input type="radio" name="optradio">
+                לצרף אנשים לרעיון שלי
+              </label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="optradio">
+                להצטרף לרעיון של מישהו אחר
+              </label>
+            </div>
           </div>
+          <div class="clearfix"></div>
 
+          <span id="error-ideal-time" class="error-text"></span>
+          <div class="clearfix"></div>
+          <div id="ideal-time">
+            <p>
+              מה משך הזמן האידיאלי להגיע למוצר MVP בפרוייקט צד?
+            </p>
+            <input type="text" id="ideal-time-input"/>
+            <div  id="ideal-time-select"  class="form-group">
+            <select class="form-control" name="ideal-time-select">
+                <option class="fltr" value="hours">
+                  שעות
+                </option>
+                <option class="fltr" value="days">
+                  ימים
+                </option>
+                <option class="fltr" value="weeks">
+                  שבועות
+                </option>
+            </select>
+            </div>
+          </div>
           <div class="clearfix"></div>
           <br/>
           <br/>
+
+
+          <p>הצעות, שאלות, מענות וכל מה שבא לך לכתוב. תודה!!!</p>
           <span id="error-free_text" class="error-text"></span>
           <textarea id="free_text" class="form-control" rows="2"></textarea>
             <br/>

@@ -78,6 +78,19 @@
   margin-left: 3%;
 }
 
+
+#ideal-time-input{
+  float: right;
+  margin-left: 20px;
+  height: 32px;
+  width: 50px;
+}
+
+#ideal-time-select{
+  width: 13%;
+  float: right;
+}
+
 #footer{
   border-top: 1px solid #000000;
   padding-top: 4%;
