@@ -86,7 +86,7 @@ $(function() {
                     console.log('New object created with objectId: ' + user.id);
                     //after data sent confirmation, change to the thank you page
                     Global.Email = email;
-                    window.location.replace("#/thank-you");
+                    window.location.replace("#/feedback");
                 },
                 error: function(user, error) {
                     //TODO send a google analytics event here

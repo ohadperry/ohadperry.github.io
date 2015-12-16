@@ -18,7 +18,7 @@ $(function() {
                 });
 
 
-                this.get('#/thank-you', function() {
+                this.get('#/feedback', function() {
                     $("#main-block").load("templates/thank-you.html.erb", function(){
                         ThankYou.bindFeedbackSubmit();
                     });
