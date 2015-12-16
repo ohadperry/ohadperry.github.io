@@ -2,11 +2,13 @@ $(function() {
     var Global = {
 
         Email: undefined,
+        colors: ['light-green', 'light-red', 'light-yellow'],
+        currentColor: 0,
 
         init: function () {
 
-            //Global.bindFaqClick();
             Global.bindFormSubmit();
+            Global.bindChangeColor();
         },
 
         //open faq popup on click
@@ -45,9 +47,6 @@ $(function() {
             $('#notify-me').html('Sending ... ').prop('disabled', true);
         },
 
-        //enableSubmitButton: function(){
-        //    $('#solve-it-btn').html('Solve it for me').prop('disabled', false);
-        //},
 
         dataValidationBeforeSending: function(){
             var errors = [],
@@ -60,7 +59,8 @@ $(function() {
 
             //check for new errors
             if (!Global.isEmail($('#email').val())) {
-                errors.push({'id': 'email', errorMessage: 'Please enter a valid email.'})
+
+                errors.push({'id': 'email', errorMessage: 'אנא מלא אימייל תקין'})
             }
 
             if (errors.length > 0){
@@ -104,6 +104,25 @@ $(function() {
         isEmail: function(email) {
             var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
             return regex.test(email);
+        },
+
+        bindChangeColor: function(){
+            $('#color-change').on('click', function(event){
+                event.preventDefault();
+
+                var oldColor, newColor;
+
+                oldColor = Global.colors[Global.currentColor];
+                Global.currentColor += 1;
+                if (Global.currentColor > Global.colors.length -1){
+                    Global.currentColor = 0;
+                }
+
+                newColor = Global.colors[Global.currentColor];
+
+                $('#vision-message').switchClass(oldColor, newColor);
+                $('#notify-me').switchClass(oldColor + '-background', newColor+ '-background');
+            });
         }
 
     };

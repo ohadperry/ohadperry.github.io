@@ -1,3 +1,8 @@
+#page-container{
+  width: 80%;
+  margin:0 auto;
+}
+
 .radio-feedback{
   margin-right: 20px;
 }
@@ -6,20 +11,85 @@
   color: red;
 }
 
-
-.submit-btn{
-  background-color: red;
+.light-green{
+  color: #19BB9B;
 }
 
-.submit-btn:hover {
-  background-color: #000000;
+.light-green-background{
+  background-color: #19BB9B;
+  color: #ffffff;
 }
 
-#footer{
-  border-top: 1px solid #000000;
+.light-green-background:hover {
+  background-color: #19BB9B;
+  color: #000000;
 }
+
+.light-red{
+  color: lightcoral;
+}
+
+.light-red-background{
+  background-color: lightcoral;
+  color: #ffffff;
+}
+
+.light-red-background:hover {
+  background-color: lightcoral;
+  color: #000000;
+}
+
+.light-yellow{
+  color: #ffff00;
+}
+
+.light-yellow-background{
+  background-color: #ffff00;
+  color: #ffffff;
+}
+
+.light-yellow-background:hover {
+  background-color: #ffff00;
+  color: #000000;
+}
+
+
+#notify-form{
+  margin-top: 7%;
+  margin-bottom: 7%;
+}
+
+
 
 .domain-name{
   color: #000000;
   font-size: 20px;
 }
+
+
+#vision-message{
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.email-input{
+  width: 25%;
+  height: 32px;
+  margin-left: 3%;
+}
+
+#footer{
+  border-top: 1px solid #000000;
+  padding-top: 4%;
+}
+
+
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 568px)
+{
+  .email-input{
+    width: 40%;
+  }
+}
+
