@@ -1,0 +1,25 @@
+.radio-feedback{
+  margin-right: 20px;
+}
+
+.error-text{
+  color: red;
+}
+
+
+.submit-btn{
+  background-color: red;
+}
+
+.submit-btn:hover {
+  background-color: #000000;
+}
+
+#footer{
+  border-top: 1px solid #000000;
+}
+
+.domain-name{
+  color: #000000;
+  font-size: 20px;
+}
