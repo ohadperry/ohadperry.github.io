@@ -79,7 +79,7 @@
 }
 
 
-#ideal-time-input{
+#ideal-time-input, #hours-a-week-input{
   float: right;
   margin-left: 20px;
   height: 32px;
