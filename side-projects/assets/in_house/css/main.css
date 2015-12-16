@@ -59,7 +59,9 @@
   margin-bottom: 7%;
 }
 
-
+.radios{
+  margin-right: 20px;
+}
 
 .domain-name{
   color: #000000;
@@ -95,6 +97,16 @@
   border-top: 1px solid #000000;
   padding-top: 4%;
 }
+
+/*#fix for bootstrap*/
+.radio input[type="radio"],
+.radio-inline input[type="radio"],
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+  margin-right: -20px;
+  margin-left: auto;
+}
+
 
 
 @media only screen

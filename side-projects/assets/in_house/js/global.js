@@ -8,6 +8,7 @@ $(function() {
         init: function () {
 
             Global.bindFormSubmit();
+            Global.setColor();
             Global.bindChangeColor();
         },
 
@@ -104,6 +105,12 @@ $(function() {
         isEmail: function(email) {
             var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
             return regex.test(email);
+        },
+
+        setColor: function(){
+            var color = Global.colors[Global.currentColor];
+            $('#vision-message').removeClass().addClass(color);
+            $('#notify-me').removeClass().addClass(color + '-background');
         },
 
         bindChangeColor: function(){
