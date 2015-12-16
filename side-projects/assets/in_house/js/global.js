@@ -8,7 +8,6 @@ $(function() {
         init: function () {
 
             Global.bindFormSubmit();
-            Global.setColor();
             Global.bindChangeColor();
         },
 
@@ -28,11 +27,11 @@ $(function() {
             });
 
             $('#notify-form').bind('keypress', function(e) {
+                e.preventDefault();
                 var code = e.keyCode || e.which;
                 if(code == 13) { //'Enter' keycode
                     Global.formSubmit();
                 }
-
             });
 
             //TODO - also submit on 'enter' key
@@ -107,11 +106,6 @@ $(function() {
             return regex.test(email);
         },
 
-        setColor: function(){
-            var color = Global.colors[Global.currentColor];
-            $('#vision-message').removeClass().addClass(color);
-            $('#notify-me').removeClass().addClass(color + '-background');
-        },
 
         bindChangeColor: function(){
             $('#color-change').on('click', function(event){

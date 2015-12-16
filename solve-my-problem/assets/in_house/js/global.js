@@ -32,7 +32,6 @@ $(function() {
 
             });
 
-            //TODO - also submit on 'enter' key
         },
 
         formSubmit: function(){
