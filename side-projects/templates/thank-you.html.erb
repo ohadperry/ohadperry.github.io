@@ -1,109 +1,139 @@
     <div id="thank-you-page">
-        <div id="feedback">
-             <p>נשמח לשמוע ממך עוד</p>
+      <div id="feedback">
+        <p>נשמח לשמוע ממך עוד</p>
 
-          <!--################################################-->
-          <span id="error-buyer-sellers" class="error-text"></span>
-          <div class="clearfix"></div>
-          <div id="buyer-sellers">
-            <p>
-              מה יותר סביר, שתרצה לצרף אנשים לרעיון שלך או שתצטרף לרעיון של מישהו אחר?
-            </p>
-            <div class="radios">
-                <div class="radio">
-                  <label><input type="radio" name="optradio">
-                    לצרף אנשים לרעיון שלי
-                  </label>
-                </div>
-                <div class="radio">
-                  <label><input type="radio" name="optradio">
-                    להצטרף לרעיון של מישהו אחר
-                  </label>
-                </div>
+        <!--################################################-->
+        <span id="error-buyer-sellers" class="error-text"></span>
+        <div class="clearfix"></div>
+        <div id="buyer-sellers">
+          <p>
+            מה יותר סביר, שתרצה לצרף אנשים לרעיון שלך או שתצטרף לרעיון של מישהו אחר?
+          </p>
+          <div class="radios">
+            <div class="radio">
+              <label><input type="radio" name="buyer-sellers">
+                לצרף אנשים לרעיון שלי
+              </label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="buyer-sellers">
+                להצטרף לרעיון של מישהו אחר
+              </label>
             </div>
           </div>
-          <div class="clearfix"></div>
-
-
-          <!--################################################-->
-          <span id="error-ideal-time" class="error-text"></span>
-          <div class="clearfix"></div>
-          <div id="ideal-time">
-            <p>
-              מה משך הזמן האידיאלי להגיע למוצר MVP בפרוייקט צד?
-            </p>
-            <input type="text" id="ideal-time-input"/>
-            <div  id="ideal-time-select"  class="form-group">
-            <select class="form-control" name="ideal-time-select">
-                <option class="fltr" value="hours">
-                  שעות
-                </option>
-                <option class="fltr" value="days">
-                  ימים
-                </option>
-                <option class="fltr" value="weeks">
-                  שבועות
-                </option>
-            </select>
-            </div>
-          </div>
-          <div class="clearfix"></div>
-
-          <!--################################################-->
-          <span id="error-hours-a-week" class="error-text"></span>
-          <div class="clearfix"></div>
-          <div id="hours-a-week">
-            <p>
-              כמה שעות בשבוע אתה יכול להשקיע בפרויקט צד?
-            </p>
-            <input type="text" id="hours-a-week-input"/>
-          </div>
-          <div class="clearfix"></div>
-
-
-          <!--################################################-->
-          <span id="error-ideal-time" class="error-text"></span>
-          <div class="clearfix"></div>
-          <div id="ideal-time">
-            <p>
-              למה בעיקר אתה מתעניין בפרוייקטי צד?
-            </p>
-            <div class="radios">
-                <div class="radio">
-                  <label><input type="radio" name="optradio">
-                    להכיר אנשים
-                  </label>
-                </div>
-                <div class="radio">
-                  <label><input type="radio" name="optradio">
-                    אתגר מקצועי
-                  </label>
-                </div>
-                <div class="radio">
-                  <label><input type="radio" name="optradio">
-                    הכנסה צדדית
-                  </label>
-                </div>
-                <div class="radio">
-                  <label><input type="radio" name="optradio">
-                    התנסות ביזמות
-                  </label>
-                </div>
-                <label class="radio">
-                  <input type="radio" name="user_choice" value="other">
-                    אחר:
-                  <input type="text" name="other_text">
-                </label>
-              </div>
-          </div>
-          <div class="clearfix"></div>
-
-          <!--################################################-->
-          <p>הצעות, שאלות, מענות וכל מה שבא לך לכתוב. תודה!!!</p>
-          <span id="error-free_text" class="error-text"></span>
-          <textarea id="free_text" class="form-control" rows="2"></textarea>
-            <br/>
-            <a id="feedback-button" class="btn btn-success pull-left">שלח משוב</a>
         </div>
+        <div class="clearfix"></div>
+
+
+        <!--################################################-->
+        <span id="error-ideal-time" class="error-text"></span>
+        <div class="clearfix"></div>
+        <div id="ideal-time">
+          <p>
+            איזה סוג של פרוייקט צד יותר מושך אותך יותר?
+          </p>
+          <div class="radios">
+            <div class="radio">
+              <label><input type="radio" name="ideal-time">
+                האקתון (עד 48 שעות אינטנסיביות) לתוצר
+              </label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="ideal-time">
+                פרוייקט קצר (עד חודש לתוצר)
+              </label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="ideal-time">
+                פרוייקט מתמשך (עד שלושה חודשים לתוצר)
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+
+        <!--################################################-->
+        <span id="error-abilities" class="error-text"></span>
+        <div class="clearfix"></div>
+        <div id="abilities">
+          <p>
+            מה היכולות החזקות שלך?
+          </p>
+          <div class="checkbox">
+            <label><input type="checkbox" value="">
+            מפתח
+            </label>
+          </div>
+          <div class="checkbox">
+            <label><input type="checkbox" value="">
+            מוצר
+            </label>
+          </div>
+          <div class="checkbox">
+            <label><input type="checkbox" value="">
+            מעצב
+            </label>
+          </div>
+          <div class="checkbox">
+            <label><input type="checkbox" value="">
+              שיווק
+            </label>
+          </div>
+          <div class="checkbox">
+            <label> <input type="checkbox" name="abilities" value="other">
+              אחר:
+              <input type="text" name="abilities-other">
+            </label>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+
+
+        <!--################################################-->
+        <span id="error-main-motivation" class="error-text"></span>
+        <div class="clearfix"></div>
+        <div id="main-motivation">
+          <p>
+            למה בעיקר אתה מתעניין בפרוייקטי צד?
+          </p>
+          <div class="radios">
+            <div class="radio">
+              <label><input type="radio" name="main-motivation">
+                להכיר אנשים
+              </label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="main-motivation">
+                אתגר מקצועי
+              </label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="main-motivation">
+                הכנסה צדדית
+              </label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="main-motivation">
+                התנסות ביזמות
+              </label>
+            </div>
+            <label class="radio">
+              <input type="radio" name="main-motivation" value="other">
+              אחר:
+              <input type="text" name="main-motivation-other">
+            </label>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+
+        <!--################################################-->
+        <p>הצעות, שאלות, מענות וכל מה שבא לך לכתוב. תודה!!!</p>
+        <span id="error-free_text" class="error-text"></span>
+        <textarea id="free_text" class="form-control" rows="2"></textarea>
+        <div class="clearfix"></div>
+        <br/>
+        <a id="feedback-button" class="btn btn-success">שלח משוב</a>
+      </div>
 
     </div>
+    <div class="clearfix"></div>

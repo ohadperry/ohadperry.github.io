@@ -78,6 +78,7 @@
   width: 25%;
   height: 32px;
   margin-left: 3%;
+  z-index: 1;
 }
 
 
@@ -98,13 +99,27 @@
   padding-top: 4%;
 }
 
-/*#fix for bootstrap*/
+/*#fix for bootstrap radio buttons*/
 .radio input[type="radio"],
 .radio-inline input[type="radio"],
 .checkbox input[type="checkbox"],
 .checkbox-inline input[type="checkbox"] {
   margin-right: -20px;
   margin-left: auto;
+}
+
+.checkbox label{
+  margin-right: 20px;
+}
+
+/*TODO Move to thank you page css*/
+#feedback{
+   margin-bottom: 10px;
+}
+
+
+#free_text{
+  width: 60%;
 }
 
 

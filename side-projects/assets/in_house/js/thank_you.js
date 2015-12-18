@@ -7,10 +7,10 @@ $(function() {
 
         bindFeedbackSubmit: function() {
             $('#feedback-button').on('click', function(){
-                ThankYou.dataValidationBeforeSending();
+                //TODO add validations
+                //ThankYou.dataValidationBeforeSending();
                 ThankYou.disableSubmitButton();
                 ThankYou.sendTheData();
-
             })
         },
 
@@ -44,14 +44,31 @@ $(function() {
         },
 
         sendTheData: function(){
-            var productLove = parseInt($('input[name=feedback-radio]:checked').val()),
-                free_text = $('#free_text').val(),
+            var buyerOrSeller = $('input[name=buyer-sellers]:checked').closest('label').text(),
+                idealTimeForSideProject = $('input[name=ideal-time]:checked').closest('label').text(),
+                mainAbilities = [],
+                abilityOther = $('input[name=abilities-other]').val(),
+                mainMotivationOther = $('input[name=main-motivation-other]').val(),
+                mainMotivationReason = $('input[name=main-motivation]:checked').closest('label').text(),
+                freeText = $('#free_text').val(),
                 email = Global.Email,
                 Feedback = Parse.Object.extend('Feedback'),
                 feedback = new Feedback();
 
-            feedback.set("productLove", productLove);
-            feedback.set("free_text", free_text);
+            $.each($('#abilities input:checked'), function(){
+                mainAbilities.push($(this).closest('label').text().replace(/(\r\n|\n|\r)/gm,""));
+            });
+
+            if (abilityOther != ""){
+                mainAbilities.push(abilityOther)
+            }
+
+            mainMotivationReason = mainMotivationOther || mainMotivationReason;
+            feedback.set("buyerOrSeller", buyerOrSeller);
+            feedback.set("idealTimeForSideProject", idealTimeForSideProject);
+            feedback.set("mainAbilities", mainAbilities);
+            feedback.set("mainMotivationReason", mainMotivationReason);
+            feedback.set("freeText", freeText);
             feedback.set("email", email);
 
             feedback.save(null, {

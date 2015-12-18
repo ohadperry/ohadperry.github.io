@@ -123,6 +123,8 @@ $(function() {
 
                 $('#vision-message').switchClass(oldColor, newColor);
                 $('#notify-me').switchClass(oldColor + '-background', newColor+ '-background');
+                // send a google analytics event about it
+                ga('send', 'color-change');
             });
         }
 
