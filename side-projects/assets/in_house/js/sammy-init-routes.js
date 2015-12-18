@@ -10,6 +10,7 @@ $(function() {
             var app = $.sammy(function() {
 
                 this.get('#/', function() {
+                    $("#header").load("templates/header.html.erb");
                     $("#main-block").load("templates/first-page.html.erb");
 
                     $("#footer").load("templates/footer.html.erb", function() {
@@ -19,6 +20,7 @@ $(function() {
 
 
                 this.get('#/feedback', function() {
+                    $("#header").load("templates/header.html.erb");
                     $("#main-block").load("templates/thank-you.html.erb", function(){
                         ThankYou.bindFeedbackSubmit();
                     });
@@ -29,6 +31,7 @@ $(function() {
                 });
 
                 this.get('#/feedback-thank-you', function() {
+                    $("#header").load("templates/header.html.erb");
                     $("#main-block").load("templates/feedback-thank-you.html.erb");
                     $("#footer").load("templates/footer.html.erb", function() {
                         Global.init();

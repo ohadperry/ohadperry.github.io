@@ -1,3 +1,38 @@
+body{
+  font-family: 'Arimo', sans-serif;
+}
+a{
+   color: #6D82C3;
+ }
+
+a:hover{
+  color: #6D82C3;
+}
+
+p{
+  font-size: 13.5px;
+  color: #4A4A4A;
+  margin: 0;
+}
+
+#header{
+  margin-top: 80px;
+  margin-bottom: 40px;
+}
+
+#main-block{
+
+}
+
+#title-right{
+   width: 15%;
+}
+
+#title-left{
+  width: 78%;
+  border-bottom: 1px solid #cccccc;
+}
+
 #page-container{
   width: 70%;
   margin:0 auto;
@@ -12,17 +47,82 @@
 }
 
 .light-green{
-  color: #19BB9B;
+  color: #15BD9C;
 }
 
 .light-green-background{
-  background-color: #19BB9B;
+  background-color: #12A185;
   color: #ffffff;
 }
 
 .light-green-background:hover {
-  background-color: #19BB9B;
-  color: #000000;
+  background-color: #12A185;
+  color: #ffffff;
+}
+
+.light-blue{
+  color: #229ADC;
+}
+
+.light-blue-background{
+  background-color: #1380BA;
+  color: #ffffff;
+}
+
+.light-blue-background:hover {
+  background-color: #1380BA;
+  color: #ffffff;
+}
+
+.navy{
+  color: #32495E;
+}
+
+.navy-background{
+  background-color: #2B3F51;
+  color: #ffffff;
+
+}
+
+.navy-background:hover {
+  background-color: #2B3F51;
+  color: #ffffff;
+
+}
+
+
+.orange{
+  color: #F5C300;
+}
+
+.orange-background{
+  background-color: #F69B00;
+  color: #ffffff;
+}
+
+.orange-background:hover {
+  background-color: #F69B00;
+  color: #ffffff;
+}
+
+.checkbox label, .radio label{
+  font-size: 13.5px;
+}
+
+.question{
+  font-weight: bold;
+}
+.sub-question{
+  color: #666666;
+}
+
+.question-container{
+  margin-bottom: 20px;
+}
+
+.radio label{
+  font-weight: 100;
+  padding-left: 0px;
 }
 
 .light-red{
@@ -53,10 +153,24 @@
   color: #000000;
 }
 
+#join-us{
+  margin-top: 7%;
+}
 
 #notify-form{
-  margin-top: 7%;
+  margin-top: 2%;
   margin-bottom: 7%;
+}
+
+#notify-me{
+  border-color: transparent;
+  width: 12%;
+  margin-bottom: 3px;
+  border-radius: 0;
+}
+
+#feedback-button{
+  border-color: transparent;
 }
 
 .radios{
@@ -64,8 +178,9 @@
 }
 
 .domain-name{
-  color: #000000;
-  font-size: 20px;
+  color: #272727;
+  font-size: 24px;
+  font-family: 'Patua One', cursive;
 }
 
 
@@ -75,10 +190,11 @@
 }
 
 .email-input{
-  width: 25%;
-  height: 32px;
-  margin-left: 3%;
-  z-index: 1;
+  width: 30%;
+  height: 34px;
+  margin-left: 1%;
+  border: 1px solid #adadad
+
 }
 
 
@@ -95,8 +211,7 @@
 }
 
 #footer{
-  border-top: 1px solid #000000;
-  padding-top: 4%;
+  padding-top: 14%;
 }
 
 /*#fix for bootstrap radio buttons*/
@@ -114,7 +229,8 @@
 
 /*TODO Move to thank you page css*/
 #feedback{
-   margin-bottom: 10px;
+  margin-bottom: 10px;
+  margin-top: 20px;
 }
 
 

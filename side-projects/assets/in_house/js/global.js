@@ -2,7 +2,7 @@ $(function() {
     var Global = {
 
         Email: undefined,
-        colors: ['light-green', 'light-red', 'light-yellow'],
+        colors: ['light-green', 'light-blue', 'navy', 'orange'],
         currentColor: 0,
 
         init: function () {
@@ -33,8 +33,6 @@ $(function() {
                     Global.formSubmit();
                 }
             });
-
-            //TODO - also submit on 'enter' key
         },
 
         formSubmit: function(){
@@ -121,8 +119,9 @@ $(function() {
 
                 newColor = Global.colors[Global.currentColor];
 
-                $('#vision-message').switchClass(oldColor, newColor);
-                $('#notify-me').switchClass(oldColor + '-background', newColor+ '-background');
+                $('#vision-message').switchClass(oldColor, newColor, 'fast');
+                $('#notify-me').switchClass(oldColor + '-background', newColor+ '-background', 'fast');
+                $('#feedback-button').switchClass(oldColor + '-background', newColor+ '-background', 'fast');
                 // send a google analytics event about it
                 ga('send', 'color-change');
             });
