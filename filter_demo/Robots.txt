@@ -1,4 +1,4 @@
 User-Agent: *
 Disallow:
 
-Sitemap: http://ohadpartuck.github.io/cv
+Sitemap: http://ohadpartuck.github.io/filter_demo
