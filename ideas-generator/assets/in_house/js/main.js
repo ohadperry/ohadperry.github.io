@@ -1,29 +1,33 @@
 $(function() {
     var Main = {
 
+        products: {},
+        markets: {},
+
         init: function () {
             //all init data
             Main.initDropDowns();
         },
 
         //TODO get data from the backend for this
+        //TODO - save in backend in local cache for with Expiry
         initDropDowns: function(){
-            var products = {},
-                markets = {};
 
             for(var i=0; i<100; i++){
-                products['product'+i] ='product'+i;
-                markets['market'+i] ='market'+i;
+                Main.products['product'+i] ='product'+i;
+                Main.markets['market'+i] ='market'+i;
             }
 
+
+
             var productsSelect = $('#product select');
-            $.each(products, function(val, text) {
+            $.each(Main.products, function(val, text) {
                 productsSelect.append(
                     $('<option></option>').val(val).html(text)
                 );
             });
             var marketSelect = $('#market select');
-            $.each(markets, function(val, text) {
+            $.each(Main.markets, function(val, text) {
                 marketSelect.append(
                     $('<option></option>').val(val).html(text)
                 );
