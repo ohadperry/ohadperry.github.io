@@ -21,9 +21,43 @@
 </head>
 <body>
 
-<div id="main-block" class="container center-block">
+    <div id="main-block" class="">
+        <div id="content-top">
+            <div id="tweet">
+            <a  href="https://twitter.com/share"
+               class="twitter-share-button"
+               data-via="ohadpartuck">Tweet</a>
+            </div>
+        </div>
+        <div id="main-text">
+            So, It's basically
+        </div>
+        <div id="product-for-market">
+            <div id="product">
+                <select>
+                    <option value="product1">product1</option>
+                    <option value="product2">product2</option>
+                    <option value="product3">product3</option>
+                    <option value="product4">product4</option>
+                </select>
+            </div>
+            <div id="for">
+                For
+            </div>
+            <div id="market">
+                <select>
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                </select>
+            </div>
+        </div>
+        <div id="spin-row"></div>
+    </div>
+    <div id="footer" class="">
 
-</div>
+    </div>
 
 </body>
 
@@ -34,11 +68,11 @@
 <!--parse (backend as a service) sdk -->
 <!--<script src="assets/vendors/parse/parse.min.js"></script>-->
 
+<!--Tweet this page -->
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
 <!--In house js-->
 <script src="assets/in_house/js/global.js"></script>
-<script src="assets/in_house/js/sammy-init-routes.js"></script>
-<script src="assets/in_house/js/backend_integration.js"></script>
 
 <!--SEO no script support-->
 <noscript>Your browser does not support JavaScript!</noscript>

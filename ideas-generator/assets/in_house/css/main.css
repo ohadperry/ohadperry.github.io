@@ -1,0 +1,40 @@
+body{
+    flex: 1;
+}
+#main-block{
+    width: 80%;
+    /*align center*/
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: red;
+    overflow: auto;
+    padding: 20px;
+}
+
+#content-top{
+    overflow: auto;
+    display: block;
+    background-color: #000099;
+}
+
+#tweet{
+    margin-right: 3%;
+    float: right;
+}
+
+
+#main-text{
+   margin: 0 auto;
+    text-align: center;
+   font-size: 48px;
+   background-color: #00CC00;
+}
+
+#product-for-market{
+   font-size: 36px;
+}
+
+
+#spin-row{
+
+}
