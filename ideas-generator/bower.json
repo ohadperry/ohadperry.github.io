@@ -1,0 +1,29 @@
+{
+  "name": "Idea generator",
+  "homepage": "https://github.com/ohadpartuck/ohadpartuck.github.io",
+  "authors": [
+    "ohad perry"
+  ],
+  "description": "A website that randoms existing products with creative markets",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "problems",
+    "solve my problems",
+    "daily issues"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.5",
+    "jquery": "^2.1.4",
+    "parse": "^1.6.9"
+  }
+}
