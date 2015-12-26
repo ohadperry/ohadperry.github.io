@@ -24,14 +24,14 @@ body{
 
 
 #main-text{
-   margin: 0 auto;
-   text-align: center;
-   font-size: 48px;
-   background-color: #00CC00;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 48px;
+    background-color: #00CC00;
 }
 
 #product-for-market{
-   font-size: 36px;
+    font-size: 36px;
 
 }
 #product-for-market select{
@@ -40,16 +40,25 @@ body{
 
 
 #spin-row{
+    text-align: center;
+}
 
+
+#spin-row button{
+    font-size: 24px;
+    padding: 15px 30px;
+    background-color: green;
+    margin: 0 auto;
+    display: block;
 }
 
 /* MOBILE VERSION */
 
 @media only screen and (max-device-width: 480px) {
     /*body {*/
-        /*width: 295px;*/
-        /*font-size: 13;*/
-        /*background: none;*/
+    /*width: 295px;*/
+    /*font-size: 13;*/
+    /*background: none;*/
     /*}*/
 
 }
