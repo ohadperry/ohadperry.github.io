@@ -31,9 +31,9 @@ body{
 }
 
 #product-for-market{
-    font-size: 36px;
-
+   font-size: 18px;
 }
+
 #product-for-market select{
     padding: 10px;
 }

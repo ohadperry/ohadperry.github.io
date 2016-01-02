@@ -2,44 +2,41 @@ $(function() {
     var Main = {
 
         // TODO get this from the backend
-        products: ["Skynet", "Digital Music Distribution", "FitBit", "Realtime Data", "ManPacks", "Landing Page", "Conversion Funnel", "Social Network", "Airbnb", "SnapChat", "Bang With Friends", "HTML5 App", "Google Analytics", "Mapreduce Query", "Node.js Server", "KickStarter", "Match.com", "Adultfriendfinder", "Pinterest", "Amber Alert System", "Groupon", "Appstore", "Digital Magazine", "Distributed Social Network", "Quadcopter", "Daring Fireball", "Content Distribution Network", "Analytics Platform", "OpenTable", "LinkedIn", "Brick and Mortar Solution", "Aggregator", "Social Game", "jQuery Plugin", "Game-based Incentive", "Foursquare", "YouTube", "WeedMaps", "Texts From Last Night", "Ponzi Scheme", "1-800-Flowers", "Cash4Gold", "Online Marketplace", "Viral Marketer", "Wearable Computer", "Google Glass App", "Facebook Marketplace", "Zivity", "Playboy", "Cloud Storage Provider", "Kindle Fire App", "Pandora", "Green Tech Program", "Eco-Friendly Marketplace", "Netflix", "Amazon", "Zappos", "Reddit", "Enron", "Wordpress", "iPhone App", "Android App", "Meme Generator", "Crowdsourcing App", "Mac App", "SEO Optimizer", "Apartment Guide", "Social CRM", "Database Abstraction Layer", "Microblogging Service", "Product Curation Service", "API", "New Social Platform", "Tumblr", "Deal Finder", "CPA Ad Network", "Collaborative Filter", "Shopping Site", "Digg 2.0", "Recommendation Engine", "News Recommender", "Neural Network", "Tesseract OCR engine", "Unreadable CAPTCHA", "Mobile Ecosystem", "Flickr", "Salesforce.com", "Twitter Filter", "Wikipedia", "Yelp"],
-        markets: ["Facebook Platform", "Erlang Enthusiasts", "Collegiate Jewish Women", "Ex-Girlfriends", "Binders Full of Women", "Mitt Romney's Hair", "Laundromats", "Celebrity Gossip", "Endangered Species", "Pandas", "Middle Schoolers", "Alpha Phi Girls", "Funeral Homes", "Chinese Take-out", "Ex-Convicts", "Fast Casual Restaurants", "Marketers", "Qualifying Leads", "Funeral Homes", "Farmers", "Cougars", "Pilots", "Gynecologists", "Cracked iPhone Apps", "Stolen Goods", "Adult Dancers", "People Who Hate Groupon", "Hunters", "High-End Pornography", "Sysadmins", "Bath Salts", "Nootropics", "California", "Gay Marriages", "Government Corruption", "Political Attack Ads", "Whiskey Lovers", "Parking Tickets", "Highway Accidents", "Traveling", "Airlines", "Presentation Tools", "Your Boss", "Ponzi Schemes", "Your Finances", "Restroom Attendants", "Your Aquarium", "Your Cat's Litter Box", "Pets", "Alcoholics", "Camp Counselors", "Nature Blogs", "World of Warcraft", "Models", "Family Guy Enthusiasts", "The Army", "Cheap Vodka", "Tech Incubators", "Star Trek Conventions", "Presentation Tools", "Small Businesses", "Beer", "Nightclub Lines", "Semi-Active Volcanoes", "Attractive People", "Ugly People", "Sanctimonial Artifacts", "Traveling Abroad", "Your Mom", "Billionaires", "Happy Hours", "Ugg Boots", "The Homeless", "Blacking Out", "Red Wine", "Christian Families", "Social Outcasts", "Surgeons", "Sorority Chicks", "Pounding Jagger Bombs", "Medicinal Marijuana", "Textbooks", "Coffee Shops", "Baristas"],
+        //products: ["Tinder", "Secret", "Mail Chimp", "Snapchat", "Facebook", "Landing Pages", "Community", "Social Network", "Airbnb", "Bang With Friends", "Google Analytics", "KickStarter", "Dating Site", "Pinterest", "Amber Alert System", "Groupon", "Distributed Social Network", "Content Distribution Network (CDN)", "Rest", "LinkedIn", "Aggregator", "Social Game", "jQuery Plugin", "Game-based Incentive", "YouTube", "Weed Maps", "Online Marketplace", "Cloud Storage Provider", "Wikipedia", "Yelp"],
+        //markets: ["Erlang Enthusiasts", "Colleagues", "Ex-Girlfriends", "Developers", "Designers", "Dog owners", "Marriage", "Kids", "Teenagers", "Alcohol Fans", "construction"],
+
         randomProduct: '',
         randomMarket: '',
 
         init: function () {
             //all init data
-            Main.initDropDowns();
+            Main.getDataFromServer();
         },
 
         //TODO get data from the backend for this
         //TODO - save in backend in local cache for with Expiry
         initDropDowns: function(){
 
-           var randomProductIndex = Main.randomItemIndex(Main.products),
-               randomMarketIndex = Main.randomItemIndex(Main.markets),
-               optionElement;
+           if (Main.markets == undefined || Main.products == undefined){
+               setTimeout(Main.initDropDowns, 200);
+               return;
+           }
 
-           p(randomProductIndex);
-           p(randomMarketIndex);
+            Main.fillSelectWithData($('#product select'),
+                Main.products, Main.randomItemIndex(Main.products));
+            Main.fillSelectWithData($('#market select'),
+                Main.markets,  Main.randomItemIndex(Main.markets));
+        },
 
-            var productsSelect = $('#product select');
-            $.each(Main.products, function(index, text) {
+        fillSelectWithData: function(select, array, randomIndex){
+            var optionElement;
+            $.each(array, function(index, serverData) {
+                var text = serverData.attributes.name;
                 optionElement = '<option></option>';
-                if (randomProductIndex == index){
+                if (randomIndex == index){
                     optionElement = '<option selected="selected"></option>';
                 }
-                productsSelect.append(
-                    $(optionElement).val(text).html(text)
-                );
-            });
-            var marketSelect = $('#market select');
-            $.each(Main.markets, function(index, text) {
-                optionElement = '<option></option>';
-                if (randomMarketIndex == index){
-                    optionElement = '<option selected="selected"></option>';
-                }
-                marketSelect.append(
+                select.append(
                     $(optionElement).val(text).html(text)
                 );
             });
@@ -48,7 +45,33 @@ $(function() {
         // a method to select a random item from the products/markets array
         randomItemIndex: function(array){
             return Math.floor(Math.random()*array.length);
-        }
+        },
+
+        getDataFromServer: function(){
+            var query = new Parse.Query('Markets');
+            query.find({
+                success: function(markets) {
+                    Main.markets = markets;
+                    for (var i = 0; i < markets.length; ++i) {
+                        console.log('market - ' + markets[i].attributes.name);
+                    }
+                }
+            });
+
+            query = new Parse.Query('Products');
+            query.find({
+                success: function(products) {
+                    Main.products = products;
+                    for (var i = 0; i < products.length; ++i) {
+                        console.log('product - ' + products[i].attributes.name);
+                    }
+                }
+            });
+
+            Main.initDropDowns();
+        },
+
+
 
 
     };
@@ -63,7 +86,18 @@ $(function() {
 
         window.p = p;
 
-        Main.init();
+        function initFromServer() {
+            if (typeof(Parse) == 'undefined') {
+                console.log('Parse not ready yet');
+                setTimeout(initFromServer, 200);
+            }else{
+                console.log('Parse is ready');
+                setTimeout(Main.init, 300)
+
+            }
+        }
+
+        initFromServer();
     });
 
 });
