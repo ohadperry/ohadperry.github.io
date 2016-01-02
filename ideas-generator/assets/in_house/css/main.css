@@ -3,18 +3,17 @@ body{
 }
 #main-block{
     width: 80%;
-    /*align center*/
     margin: 0 auto;
     margin-top: 20px;
-    background-color: red;
     overflow: auto;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 #content-top{
     overflow: auto;
     display: block;
-    background-color: #000099;
 }
 
 #tweet{
@@ -27,11 +26,19 @@ body{
     margin: 0 auto;
     text-align: center;
     font-size: 48px;
-    background-color: #00CC00;
+}
+
+/*for desktop only*/
+#product-for-market{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
 }
 
 #product-for-market{
-   font-size: 18px;
+    font-size: 18px;
+    align-self: center;
+    text-align: center;
 }
 
 #product-for-market select{
@@ -41,32 +48,51 @@ body{
 
 #spin-row{
     text-align: center;
+    margin-top: 20px;
 }
 
-
-#spin-row button{
+#spin-row a{
     font-size: 24px;
-    padding: 15px 30px;
+    padding: 5px 15px;
     background-color: green;
     margin: 0 auto;
     display: block;
+    color: white;
+    width: 25%;
 }
 
-#spin-row button{
-    font-size: 24px;
-    padding: 15px 30px;
-    background-color: green;
-    margin: 0 auto;
-    display: block;
+/*Desktop only */
+@media screen and (min-width: 800px) {
+    #for{
+        margin: 0 30px;
+    }
+
+    #product-for-market{
+        margin:  50px 0;
+    }
 }
+
 
 /* MOBILE VERSION */
 
 @media only screen and (max-device-width: 480px) {
-    /*body {*/
-    /*width: 295px;*/
-    /*font-size: 13;*/
-    /*background: none;*/
-    /*}*/
+
+    #main-text{
+        font-size: 38px;
+    }
+
+    #spin-row a{
+        width: 50%;
+    }
+
+    #for{
+        margin: 15px 0;
+    }
+
+
+    #product-for-market{
+        flex-direction: column;
+        flex: 1;
+    }
 
 }

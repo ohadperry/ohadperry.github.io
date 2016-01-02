@@ -11,6 +11,7 @@ $(function() {
         init: function () {
             //all init data
             Main.getDataFromServer();
+            Main.bindSpinButton();
         },
 
         //TODO - save in backend in local cache for with Expiry
@@ -69,6 +70,12 @@ $(function() {
 
             Main.initDropDowns();
         },
+
+        bindSpinButton: function(){
+            $('#spin-btn').on('click', function () {
+                Main.initDropDowns();
+            })
+        }
 
 
 
