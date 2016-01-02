@@ -2,8 +2,8 @@ $(function() {
     var Main = {
 
         // TODO get this from the backend
-        //products: ["Tinder", "Secret", "Mail Chimp", "Snapchat", "Facebook", "Landing Pages", "Community", "Social Network", "Airbnb", "Bang With Friends", "Google Analytics", "KickStarter", "Dating Site", "Pinterest", "Amber Alert System", "Groupon", "Distributed Social Network", "Content Distribution Network (CDN)", "Rest", "LinkedIn", "Aggregator", "Social Game", "jQuery Plugin", "Game-based Incentive", "YouTube", "Weed Maps", "Online Marketplace", "Cloud Storage Provider", "Wikipedia", "Yelp"],
-        //markets: ["Erlang Enthusiasts", "Colleagues", "Ex-Girlfriends", "Developers", "Designers", "Dog owners", "Marriage", "Kids", "Teenagers", "Alcohol Fans", "construction"],
+        //products: ["Snapchat", "", "", "", "", "", "", "", "", "Dating Site", "Pinterest", "Amber Alert System", "Groupon", "Distributed Social Network", "Content Distribution Network (CDN)", "Rest", "LinkedIn", "Aggregator", "Social Game", "jQuery Plugin", "Game-based Incentive", "YouTube", "Weed Maps", "Online Marketplace", "Cloud Storage Provider", "Wikipedia", "Yelp"],
+        //markets: ["", "", "", "", "", "", "", "", "", "Alcohol Fans", "construction"],
 
         randomProduct: '',
         randomMarket: '',
@@ -13,7 +13,6 @@ $(function() {
             Main.getDataFromServer();
         },
 
-        //TODO get data from the backend for this
         //TODO - save in backend in local cache for with Expiry
         initDropDowns: function(){
 
