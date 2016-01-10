@@ -52,9 +52,6 @@ $(function() {
             query.find({
                 success: function(markets) {
                     Main.markets = markets;
-                    for (var i = 0; i < markets.length; ++i) {
-                        console.log('market - ' + markets[i].attributes.name);
-                    }
                 }
             });
 
@@ -62,9 +59,6 @@ $(function() {
             query.find({
                 success: function(products) {
                     Main.products = products;
-                    for (var i = 0; i < products.length; ++i) {
-                        console.log('product - ' + products[i].attributes.name);
-                    }
                 }
             });
 
