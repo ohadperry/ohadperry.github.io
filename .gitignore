@@ -24,3 +24,8 @@ config/secrets.yml
 .rvmrc
 
 /.idea
+
+
+ideas-generator/assets/vendors/bootstrap/js/
+ideas-generator/assets/vendors/bootstrap/less/
+ideas-generator/assets/vendors/bootstrap/nuget/
