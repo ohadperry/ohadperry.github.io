@@ -2,8 +2,8 @@ $(function() {
     var Main = {
 
         // TODO get this from the backend
-        //products: ["Snapchat", "", "", "", "", "", "", "", "", "Dating Site", "Pinterest", "Amber Alert System", "Groupon", "Distributed Social Network", "Content Distribution Network (CDN)", "Rest", "LinkedIn", "Aggregator", "Social Game", "jQuery Plugin", "Game-based Incentive", "YouTube", "Weed Maps", "Online Marketplace", "Cloud Storage Provider", "Wikipedia", "Yelp"],
-        //markets: ["", "", "", "", "", "", "", "", "", "Alcohol Fans", "construction"],
+        //products: ["", "", "", "", "", ""],
+        //markets: ["", "", ""],
 
         randomProduct: '',
         randomMarket: '',
