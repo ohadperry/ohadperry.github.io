@@ -362,6 +362,19 @@ body {
 	text-align: left;
 }
 
+.medium-img{
+	width: 50%;
+	height: 50%;
+}
+
+.center{
+	margin: 0 auto;
+}
+
+.red{
+	color: #ff0000;
+}
+
 /* media queries */
 
 @media screen and (min-height: 41em) and (min-width: 80em)

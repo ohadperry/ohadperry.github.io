@@ -36,7 +36,7 @@
 
   <meta name="description" content="Flowtime.js is an open source framework for easily build HTML presentations or websites. It’s built with web standards in mind and on top of a solid full page grid layout powered by CSS3 hardware accelerated transition and comes with a complete set of Javascript API for deep customization.">
 
-  <title>Flowtime.js - Scroll The Section Demo</title>
+  <title>Flowtime.js - Cross Direction Demo</title>
   <link rel="stylesheet" href="../../assets/css/reset.css">
   <link rel="stylesheet" href="../../css/flowtime.css">
   <link rel="stylesheet" href="../../css/themes/default.css">
@@ -50,22 +50,16 @@
   
   <link rel="apple-touch-startup-image" href="../../img/startup-640x920.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)">
   <link rel="apple-touch-startup-image" href="../../img/startup-640x1096.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)">
-
-  <style>
-    .ft-absolute-nav {
-      transform: scale(0.75);
-    }
-  </style>
   
 </head>
 <body class="">
   
-  <div class="flowtime">
+  <div class="flowtime ft-cross">
     <div class="ft-section" data-id="section-1">
-      <div id="/section-1/page-1" class="ft-page" data-id="page-1" data-title="Scroll The Section Demo">
+      <div id="/section-1/page-1" class="ft-page" data-id="page-1" data-title="Cross Direction Demo">
         <div class="stack-center">
           <div class="stacked-center">
-            <a href="#/section-1/page-2"><img src="../../assets/img/logo-white-shadow.png"></a>
+            <a href="#/section-1/page-2"><img src="../../assets/images/logo-white-shadow.png"></a>
             <p class="page-title">A Presentation Framework by <a href="https://twitter.com/marcolago" target="_blank">@marcolago</a></p>
             <p>Press <strong>Down Key</strong> to continue<br>
               Or <strong>Swipe Up</strong> if you prefer.</p>
@@ -257,27 +251,27 @@
           Look at the source code to learn how to write the markup.</p>
       </div>
       <div id="/section-5/page-2" class="ft-page" data-id="page-2" data-title="Fluid Images">
-        <a href="http://www.genereavventura.com" target="_blank"><img src="../../assets/img/genereavventura.jpg"></a>
+        <a href="http://www.genereavventura.com" target="_blank"><img src="../../assets/images/genereavventura.jpg"></a>
       </div>
       <div id="/section-5/page-3" class="ft-page" data-id="page-3">
         <h1>Stacked Images</h1>
         <div class="stack">
-          <div class="stacked"><img src="../../assets/img/mi1-stacked-0.png"></div>
-          <div class="ft-fragment stacked"><img src="../../assets/img/mi1-stacked-1.png"></div>
-          <div class="ft-fragment stacked"><img src="../../assets/img/mi1-stacked-2.png"></div>
-          <div class="ft-fragment stacked"><img src="../../assets/img/mi1-stacked-3.png"></div>
-          <div class="ft-fragment stacked"><img src="../../assets/img/mi1-stacked-4.png"></div>
-          <div class="ft-fragment stacked"><img src="../../assets/img/mi1-stacked-5.png"></div>
-          <div class="ft-fragment stacked"><img src="../../assets/img/mi1-stacked-6.png"></div>
+          <div class="stacked"><img src="../../assets/images/mi1-stacked-0.png"></div>
+          <div class="ft-fragment stacked"><img src="../../assets/images/mi1-stacked-1.png"></div>
+          <div class="ft-fragment stacked"><img src="../../assets/images/mi1-stacked-2.png"></div>
+          <div class="ft-fragment stacked"><img src="../../assets/images/mi1-stacked-3.png"></div>
+          <div class="ft-fragment stacked"><img src="../../assets/images/mi1-stacked-4.png"></div>
+          <div class="ft-fragment stacked"><img src="../../assets/images/mi1-stacked-5.png"></div>
+          <div class="ft-fragment stacked"><img src="../../assets/images/mi1-stacked-6.png"></div>
         </div>
       </div>
       <div id="/section-5/page-4" class="ft-page" data-id="page-4">
         <div class="stack-center">
           <h1 class="stacked-center">Centered Stacked Images</h1>
         </div>
-        <div class="ft-fragment stack-center"><img class="stacked-center" src="../../assets/img/mi2-concept-art.jpg"></div>
-        <div class="ft-fragment stack-center"><img class="stacked-center" src="../../assets/img/mi2-original.jpg"></div>
-        <div class="ft-fragment stack-center"><img class="stacked-center" src="../../assets/img/mi2-special-edition.jpg"></div>
+        <div class="ft-fragment stack-center"><img class="stacked-center" src="../../assets/images/mi2-concept-art.jpg"></div>
+        <div class="ft-fragment stack-center"><img class="stacked-center" src="../../assets/images/mi2-original.jpg"></div>
+        <div class="ft-fragment stack-center"><img class="stacked-center" src="../../assets/images/mi2-special-edition.jpg"></div>
       </div>
       <div id="/section-5/page-5" class="ft-page" data-id="page-5">
         <div class="stack-center">
@@ -301,9 +295,9 @@
       </div>
       <div id="/section-6/page-2" class="ft-page parallax-demo" data-id="page-2">
         <h1>The Invaders from Audiogalaxy</h1>
-        <img class="kingmix parallax" src="../../assets/img/kingmix.png" data-parallax="1500,1500">
-        <img class="sax parallax" src="../../assets/img/sax.png" data-parallax="750,750">
-        <img class="tone parallax" src="../../assets/img/tone.png" data-parallax="500,500">
+        <img class="kingmix parallax" src="../../assets/images/kingmix.png" data-parallax="1500,1500">
+        <img class="sax parallax" src="../../assets/images/sax.png" data-parallax="750,750">
+        <img class="tone parallax" src="../../assets/images/tone.png" data-parallax="500,500">
       </div>
       <div id="/section-6/page-3" class="ft-page" data-id="page-3">
         <h1>This Page Is Just for Testing the Parallax</h1>
@@ -386,8 +380,6 @@
     // Flowtime.gridNavigation(false);
     // Flowtime.useOverviewVariant(true);
     Flowtime.parallaxInPx(true);
-    Flowtime.scrollTheSection(true);
-    Flowtime.gridNavigation(false);
     //
     // event management
     Flowtime.addEventListener("flowtimenavigation", onNavigation, false);

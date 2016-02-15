@@ -1,0 +1,564 @@
+<!DOCTYPE HTML>
+<!--[if IE 6]>
+<html id="ie6" lang="en-US" class="ie ie6 lt-ie9">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" lang="en-US" class="ie ie7 lt-ie9">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" lang="en-US" class="ie ie8 lt-ie9">
+<![endif]-->
+<!--[if gte IE 9]>
+<html lang="en-US" class="ie ie9">
+<![endif]-->
+<!--[if !(IE)]><!-->
+<html lang="en-US" class="">
+<!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1.0 minimal-ui">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="author" content="marcolago">
+
+	<meta property="og:title" content="How to scale your web application">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="http://ohadpartuck.github.io/burger-presentation">
+	<meta property="og:image" content="http://ohadpartuck.github.io/burger-presentation/assets/images/Vegan-Burger.jpg">
+	<meta property="og:site_name" content="Ohad Perry">
+
+	<meta name="description" content="Learn popular methods to scale up your web app. using a real live example of a burger fast food restaurant.">
+
+	<title>How to scale your web application</title>
+	<link rel="stylesheet" href="assets/css/reset.css">
+	<link rel="stylesheet" href="css/flowtime.css">
+	<link rel="stylesheet" href="css/themes/default.css">
+	<link rel="stylesheet" href="assets/css/prism.css">
+
+
+	<link rel="apple-touch-icon-precomposed" 						href="img/touch-icon-iphone.png">
+	<link rel="apple-touch-icon-precomposed" 	sizes="72x72" 		href="img/touch-icon-ipad.png">
+	<link rel="apple-touch-icon-precomposed" 	sizes="114x114" 	href="img/touch-icon-iphone-retina.png">
+	<link rel="apple-touch-icon-precomposed" 	sizes="144x144" 	href="img/touch-icon-ipad-retina.png">
+
+	<link rel="apple-touch-startup-image" href="img/startup-640x920.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)">
+	<link rel="apple-touch-startup-image" href="img/startup-640x1096.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)">
+
+</head>
+<body class="">
+
+	<div class="flowtime">
+		<div class="ft-section" data-id="section-1">
+			<div id="/section-1/page-1" class="ft-page" data-id="page-1" data-title="A simple example to understand web scaling">
+				<div class="stack-center">
+					<div class="stacked-center">
+						<p class="page-title">How to scale up your <span class="ft-fragment step">web application</span> <span class="ft-fragment">Burger place</span></p>
+						<img class="ft-fragment medium-img center" src="assets/images/Vegan-Burger.jpg">
+					</div>
+				</div>
+			</div>
+			<div id="/section-1/page-2" class="ft-page" data-id="page-2" data-title="description">
+				<h1>Let's say</h1>
+				<p>You open a fast food burger place</p>
+				<p class="ft-fragment step">you do it all by your self</p>
+				<img class="ft-fragment" style="width:40%; height: 40%" src="assets/images/by-my-self.jpg">
+				<p class="ft-fragment step">and let's say it's successful!</p>
+				<p class="ft-fragment step">you are having trouble keeping up with the work load</p>
+				<p class="ft-fragment step">ideas?</p>
+			</div>
+
+			<div id="/section-1/page-3" class="ft-page" data-id="page-3" data-title="More employees">
+				<div class="stack-center">
+					<div class="stacked-center">
+						<p class="page-title">More employees.</p>
+					</div>
+				</div>
+			</div>
+
+			<div id="/section-1/page-4" class="ft-page" data-id="page-4" data-title="Split tasks">
+				<div class="stack-center">
+					<div class="stacked-center">
+						<p class="page-title">Split Tasks.</p>
+					</div>
+				</div>
+			</div>
+
+			<div id="/section-1/page-5" class="ft-page" data-id="page-5" data-title="Hire a cook">
+				<div class="stack-center">
+					<div class="stacked-center">
+						<p class="page-title">Hire a cook to work without keeping the client waiting.</p>
+						<p class="ft-fragment step">Pass the orders to him on an orders clipper.</p>
+						<p class="ft-fragment step">add image here.</p>
+
+					</div>
+				</div>
+			</div>
+
+			<div id="/section-1/page-6" class="ft-page" data-id="page-6" data-title="New feature">
+				<h1>Now, Let's say</h1>
+				<p class="ft-fragment step">that your clients like to order what they previously ordered</p>
+				<p class="ft-fragment step">So you keep a orders directory in the kitchen</p>
+				<p class="ft-fragment step">But, the cooks just stack the orders one by one so it's organized by order time</p>
+				<p class="ft-fragment step">a specific client comes and wants what he ordered has last time, now what?</p>
+			</div>
+
+			<div id="/section-1/page-7" class="ft-page" data-id="page-7" data-title="Orders sort by client phone number">
+				<div class="stack-center">
+					<div class="stacked-center">
+						<p class="page-title">Let's make a list that sorts the orders by the client phone number and keeps the location of the orders.</p>
+						<p class="ft-fragment step">Awesome. The clients love it.</p>
+					</div>
+				</div>
+			</div>
+
+			<div id="/section-1/page-8" class="ft-page" data-id="page-8" data-title="The cooks run into each other">
+				<h1>Now you have 10 cooks cooking for your clients :-( </h1>
+				<p class="ft-fragment step">The run into each other when trying to get the clients orders</p>
+				<div class="stack-center">
+					<div class="stacked-center">
+						<p class="ft-fragment step">Let's make another 3 directories where we store our clients orders</p>
+					</div>
+				</div>
+			</div>
+
+			<div id="/section-1/page-9" class="ft-page" data-id="page-9" data-title="client history in a note for the order guys">
+				<h1>How can we improve this even more?</h1>
+				<div class="stack-center">
+					<div class="stacked-center">
+						<p class="ft-fragment step">I know</p>
+						<p class="ft-fragment step">We'll make a note. We'll list our popular clients order history.</p>
+						<p class="ft-fragment step">We'll put the note next to the girls (or guys) taking the orders.</p>
+						<p class="ft-fragment step">That way, they won't have to bother the cooks with looking for the order history.</p>
+						<p class="ft-fragment step">Great. We did it again.</p>
+					</div>
+				</div>
+			</div>
+
+			<div id="/section-1/page-10" class="ft-page" data-id="page-10" data-title="watching consultant">
+				<h1>Adding another layer</h1>
+				<div class="stack-center">
+					<div class="stacked-center">
+						<p class="ft-fragment step">Our busy workers are overloaded sometimes.</p>
+						<p class="ft-fragment step">And no body cares.</p>
+						<p class="ft-fragment step">Let's hire a consultant.</p>
+						<p class="ft-fragment step">We'll tell him to check our place every two hours.</p>
+						<p class="ft-fragment step">and scream out if he notices something weird, like overloaded employees.</p>
+					</div>
+				</div>
+			</div>
+
+			<div id="/section-1/page-11" class="ft-page" data-id="page-11" data-title="Complaint Box">
+				<h1>We value our workers' input</h1>
+				<div class="stack-center">
+					<div class="stacked-center">
+						<p class="ft-fragment step">Let's put an employee complaint box.</p>
+						<p class="ft-fragment step">If it gets too full, then are workers are not happy.</p>
+						<p class="ft-fragment step">We have to take care of them, or they'll quit.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="ft-section" data-id="section-2">
+			<div id="/section-2/page-1" class="ft-page" data-id="page-1" data-title="scale up your web app">
+				<div class="stack-center">
+					<div class="stacked-center">
+						<p class="page-title">How to scale up your web application</p>
+						<p class="ft-fragment step">This time, really. An actual web application</p>
+						<p class="ft-fragment step">Let's say it's an app to manage a burger place</p>
+					</div>
+				</div>
+			</div>
+
+			<div id="/section-2/page-2" class="ft-page" data-id="page-2" data-title="scale up your web app">
+				<h1>Let's say</h1>
+				<p>You build a nice application</p>
+				<p class="ft-fragment step">you do it all by your self</p>
+				<img class="ft-fragment" style="width:40%; height: 40%" src="assets/images/by-my-self.jpg">
+				<p class="ft-fragment step">and let's say it's successful!</p>
+				<p class="ft-fragment step">you are having trouble keeping up with the work load</p>
+				<p class="ft-fragment step">ideas?</p>
+			</div>
+
+			<div id="/section-2/page-3" class="ft-page" data-id="page-3" data-title="More servers">
+				<div class="stack-center">
+					<div class="stacked-center">
+						<p class="page-title">More servers.</p>
+					</div>
+				</div>
+			</div>
+
+			<div id="/section-2/page-4" class="ft-page" data-id="page-4" data-title="Service Orient Architecture">
+				<div class="stack-center">
+					<div class="stacked-center">
+						<p class="page-title">SOA.</p>
+						<p class="ft-fragment step">Service Orient Architecture</p>
+					</div>
+				</div>
+			</div>
+
+			<div id="/section-2/page-5" class="ft-page" data-id="page-5" data-title="Async workers">
+				<div class="stack-center">
+					<div class="stacked-center">
+						<p class="page-title">Async workers.</p>
+						<p class="ft-fragment step">Via a message broker.</p>
+					</div>
+				</div>
+			</div>
+
+			<div id="/section-2/page-6" class="ft-page" data-id="page-6" data-title="New feature">
+				<h1>Now, Let's say</h1>
+				<p class="ft-fragment step">that your clients like to order what they previously ordered</p>
+				<p class="ft-fragment step">So you keep a orders directory in the <span class="red">database</span></p>
+				<p class="ft-fragment step">But, the <span class="red">workers</span> just stack the orders one by one so it's organized by order time</p>
+				<p class="ft-fragment step">a specific client comes and wants what he ordered has last time, now what?</p>
+			</div>
+
+			<div id="/section-2/page-7" class="ft-page" data-id="page-7" data-title="Indexes">
+				<div class="stack-center">
+					<div class="stacked-center">
+						<p class="page-title">Let's make a <span class="red">index</span> that sorts the orders by the client phone number and keeps the location of the orders.</p>
+						<p class="ft-fragment step">Awesome. The clients love it.</p>
+					</div>
+				</div>
+			</div>
+
+			<div id="/section-2/page-8" class="ft-page" data-id="page-8" data-title="DB Bottleneck">
+				<h1>Now you have 10 <span class="red">workers</span> working for your clients :-( </h1>
+				<p class="ft-fragment step">The run into each other when trying to get to the <span class="red">database</span></p>
+				<div class="stack-center">
+					<div class="stacked-center">
+						<p class="ft-fragment step">Let's do a <span class="red">master/slave</span> configuration</p>
+					</div>
+				</div>
+			</div>
+
+			<div id="/section-2/page-9" class="ft-page" data-id="page-9" data-title="Caching">
+				<h1>How can we improve this even more?</h1>
+				<div class="stack-center">
+					<div class="stacked-center">
+						<p class="ft-fragment step">I know</p>
+						<p class="ft-fragment step">We'll save our popular clients order history <span class="red">in the cache</span>.</p>
+						<p class="ft-fragment step">We'll put in one server for the application responsible for taking the orders.</p>
+						<p class="ft-fragment step">That way, they won't have to bother the <span class="red">DB</span> with looking for the order history.</p>
+						<p class="ft-fragment step">Great. We did it again.</p>
+					</div>
+				</div>
+			</div>
+
+			<div id="/section-2/page-10" class="ft-page" data-id="page-10" data-title="monitoring">
+				<h1>Adding another layer</h1>
+				<div class="stack-center">
+					<div class="stacked-center">
+						<p class="ft-fragment step">Our busy <span class="red">servers and processes</span> are overloaded sometimes.</p>
+						<p class="ft-fragment step">And no body cares.</p>
+						<p class="ft-fragment step">Let's install a <span class="red">monitoring software</span>.</p>
+						<p class="ft-fragment step">We'll tell it to check our place every two seconds.</p>
+						<p class="ft-fragment step">and scream out if it notices something weird, like overloaded <span class="red">servers</span>.</p>
+					</div>
+				</div>
+			</div>
+
+			<div id="/section-2/page-11" class="ft-page" data-id="page-11" data-title="Error log">
+				<h1>We value our servers' input</h1>
+				<div class="stack-center">
+					<div class="stacked-center">
+						<p class="ft-fragment step">Let's install <span class="red">central error log</span>.</p>
+						<p class="ft-fragment step">If it gets too full, then are <span class="red">servers</span> are not <span class="red">overloaded</span>.</p>
+						<p class="ft-fragment step">We have to take care of them, or they'll <span class="red">crash.</span></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="ft-section" data-id="section-3">
+			<div id="/section-3/page-1" class="ft-page" data-id="page-1" data-title="Questions">
+				<div class="stack-center">
+					<div class="stacked-center">
+						<p class="ft-fragment step">That's all folks.</p>
+						<p class="ft-fragment step">AMA</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--<div class="ft-section" data-id="section-3">-->
+			<!--<div id="/section-3/page-1" class="ft-page" data-id="page-1">-->
+				<!--<h1>Fragments Support</h1>-->
+				<!--<p>The built in fragments navigation allows to advance step by step inside a page.<br>-->
+					<!--Press down to try.</p>-->
+				<!--<p class="ft-fragment">You can discover single elements <span class="ft-fragment">or even a single part of an element, <span class="ft-fragment">one <span class="ft-fragment">at <span class="ft-fragment">a <span class="ft-fragment">time.</span></span></span></span></span></p>-->
+				<!--<p class="ft-fragment">Fragments navigation is deeply customizable with some configuration options<br>-->
+					<!--You can learn how in the <a href="https://github.com/marcolago/flowtime.js" target="_blank">documentation</a>.</p>-->
+			<!--</div>-->
+			<!--<div id="/section-3/page-2" class="ft-page" data-id="page-2">-->
+				<!--<h1>Fragments Unleashed</h1>-->
+				<!--<p>Fragments can be more than just delayed piece of page.<p>-->
+				<!--<p>Thanks to some special classes you can add a couple of useful custom behaviours.</p>-->
+				<!--<ul>-->
+					<!--<li class="ft-fragment step">The <code>.step</code> fragment will partially fades out;</li>-->
+					<!--<li class="ft-fragment shy">The <code>.shy</code> fragment will completely hides itself;</li>-->
+					<!--<li class="ft-fragment">You can use this two special fragment types to easily create special effects.</li>-->
+				<!--</ul>-->
+				<!--<p><span class="ft-fragment shy">This</span> <span class="ft-fragment shy">is</span> <span class="ft-fragment shy">a</span> <span class="ft-fragment shy"><code>.shy</code></span> <span class="ft-fragment shy">example!</span></p>-->
+				<!--<p><span class="ft-fragment step">And</span> <span class="ft-fragment step">this</span> <span class="ft-fragment step">is</span> <span class="ft-fragment step">a</span> <span class="ft-fragment step"><code>.step</code></span> <span class="ft-fragment step">one!</span></p>-->
+			<!--</div>-->
+		<!--</div>-->
+
+		<!--<div class="ft-section" data-id="section-4">-->
+			<!--<div id="/section-4/page-1" class="ft-page" data-id="page-1">-->
+				<!--<h1>Default HTML Structures</h1>-->
+				<!--<p>Flowtime.js comes with a default theme that styles the most common HTML structures, like:</p>-->
+				<!--<h1>1<sup>st</sup> Level Heading</h1>-->
+				<!--<h2>2<sup>nd</sup> Level Heading</h2>-->
+				<!--<h3>3<sup>rd</sup> Level Heading</h3>-->
+				<!--<h4>4<sup>th</sup>, 5<sup>th</sup> and 6<sup>th</sup> Level Heading</h4>-->
+			<!--</div>-->
+			<!--<div id="/section-4/page-2" class="ft-page" data-id="page-2">-->
+				<!--<h1>Unordered Lists</h1>-->
+				<!--<ul>-->
+					<!--<li>An item.</li>-->
+					<!--<li>Another item.</li>-->
+					<!--<li>Just another item.</li>-->
+					<!--<li>Ok, we get it!</li>-->
+				<!--</ul>-->
+			<!--</div>-->
+			<!--<div id="/section-4/page-3" class="ft-page" data-id="page-3">-->
+				<!--<h1>Ordered Lists</h1>-->
+				<!--<ol>-->
+					<!--<li>One.</li>-->
+					<!--<li>Two.</li>-->
+					<!--<li>Three.</li>-->
+					<!--<li>Four.</li>-->
+				<!--</ol>-->
+			<!--</div>-->
+			<!--<div id="/section-4/page-4" class="ft-page" data-id="page-4">-->
+				<!--<h1>Definition Lists</h1>-->
+				<!--<dl>-->
+					<!--<dt>One:</dt>-->
+					<!--<dd>a single unit of everything.</dd>-->
+					<!--<dt>Two:</dt>-->
+					<!--<dd>the only even prime number.</dd>-->
+					<!--<dt>Three:</dt>-->
+					<!--<dd>without the “h” is a plant.</dd>-->
+					<!--<dt>Four:</dt>-->
+					<!--<dd>“Quattro” in italian.</dd>-->
+				<!--</dl>-->
+			<!--</div>-->
+			<!--<div id="/section-4/page-5" class="ft-page" data-id="page-5">-->
+				<!--<h1>Quotes and Citations</h1>-->
+				<!--<p>My favourite quotation: <q>The bad craftsman blames his tools</q>.</p>-->
+				<!--<blockquote>-->
+					<!--Sotto un cespo di rose scarlatte dai al rospo the caldo col latte.<br>-->
+					<!--Sotto un cespo di rose paonazze tocca al rospo lavare le tazze.-->
+				<!--</blockquote>-->
+				<!--<p><cite><a href="http://html5doctor.com/blockquote-q-cite/" target="_blank">Quoting and citing with &lt;blockquote&gt;, &lt;q&gt;, &lt;cite&gt;, and the cite attribute</a>	</cite> on HTML5 Doctor.</p>-->
+			<!--</div>-->
+			<!--<div id="/section-4/page-6" class="ft-page" data-id="page-6">-->
+				<!--<h1>Theme and Styling</h1>-->
+				<!--<p>If you don’t like the default theme or you want to build your own (or both things),<br>-->
+					<!--or if you want to build a website on top of Flowtime.js,<br>-->
+					<!--you can write your own theme and replace the default one.</p>-->
+				<!--<p>Theme and core css are in separate files so you can’t break the layout (unless you override some classes).</p>-->
+				<!--<h2>Fluid Layout</h2>-->
+				<!--<p>Everything can be fluid, just use <strong>em</strong>, <strong>rem</strong> and <strong>%</strong> units if you want to make an element resizable.</p>-->
+			<!--</div>-->
+		<!--</div>-->
+
+		<!--<div class="ft-section" data-id="section-5">-->
+			<!--<div id="/section-5/page-1" class="ft-page" data-id="page-1">-->
+				<!--<h1>Image Management</h1>-->
+				<!--<p>Images are fluid like all the other content.</p>-->
+				<!--<p>You can insert images in the flow or stack images ones on top the others with a minimal markup overhead to create some fancy fragments tricks.</p>-->
+				<!--<p>Go to the next pages to see fluid images in action and how stacked images can be managed, both in the flow or centered in the slide.<br>-->
+					<!--Look at the source code to learn how to write the markup.</p>-->
+			<!--</div>-->
+			<!--<div id="/section-5/page-2" class="ft-page" data-id="page-2" data-title="Fluid Images">-->
+				<!--<a href="http://www.genereavventura.com" target="_blank"><img src="assets/img/genereavventura.jpg"></a>-->
+			<!--</div>-->
+			<!--<div id="/section-5/page-3" class="ft-page" data-id="page-3">-->
+				<!--<h1>Stacked Images</h1>-->
+				<!--<div class="stack">-->
+					<!--<div class="stacked"><img src="assets/img/mi1-stacked-0.png"></div>-->
+					<!--<div class="ft-fragment stacked"><img src="assets/img/mi1-stacked-1.png"></div>-->
+					<!--<div class="ft-fragment stacked"><img src="assets/img/mi1-stacked-2.png"></div>-->
+					<!--<div class="ft-fragment stacked"><img src="assets/img/mi1-stacked-3.png"></div>-->
+					<!--<div class="ft-fragment stacked"><img src="assets/img/mi1-stacked-4.png"></div>-->
+					<!--<div class="ft-fragment stacked"><img src="assets/img/mi1-stacked-5.png"></div>-->
+					<!--<div class="ft-fragment stacked"><img src="assets/img/mi1-stacked-6.png"></div>-->
+				<!--</div>-->
+			<!--</div>-->
+			<!--<div id="/section-5/page-4" class="ft-page" data-id="page-4">-->
+				<!--<div class="stack-center">-->
+					<!--<h1 class="stacked-center">Centered Stacked Images</h1>-->
+				<!--</div>-->
+				<!--<div class="ft-fragment stack-center"><img class="stacked-center" src="assets/img/mi2-concept-art.jpg"></div>-->
+				<!--<div class="ft-fragment stack-center"><img class="stacked-center" src="assets/img/mi2-original.jpg"></div>-->
+				<!--<div class="ft-fragment stack-center"><img class="stacked-center" src="assets/img/mi2-special-edition.jpg"></div>-->
+			<!--</div>-->
+			<!--<div id="/section-5/page-5" class="ft-page" data-id="page-5">-->
+				<!--<div class="stack-center">-->
+					<!--<div class="stacked-center">-->
+						<!--<h1>About the Centered Stack</h1>-->
+						<!--<p class="ft-fragment">You can center anything, not only images!</p>-->
+						<!--<p class="ft-fragment">Just like this content.<br>Useful for splash pages and titles.</p>-->
+						<!--<p class="ft-fragment">And you are not limited to stacks, you can center what you want.</p>-->
+					<!--</div>-->
+				<!--</div>-->
+			<!--</div>-->
+		<!--</div>-->
+
+		<!--<div class="ft-section" data-id="section-6">-->
+			<!--<div id="/section-6/page-1" class="ft-page" data-id="page-1">-->
+				<!--<h1>Native Parallax Support</h1>-->
+				<!--<p>By popular demand Flowtime.js includes native parallax support*.</p>-->
+				<!--<p>Simply add a <code>parallax</code> class to anything you want to have parallax enabled and configure the amount of distance for all elements or for a single element using <code>data-parallax</code> attribute.</p>-->
+				<!--<p>For an example go to the <a href="#/section-6/page-2">next page</a>; for more info read the <a href="https://github.com/marcolago/flowtime.js" target="_blank">documentation</a>.</p>-->
+				<!--<p><span class="small">* By the way: I’m not a parallax fan; but ehi… this is the "web 3.0".</span></p>-->
+			<!--</div>-->
+			<!--<div id="/section-6/page-2" class="ft-page parallax-demo" data-id="page-2">-->
+				<!--<h1>The Invaders from Audiogalaxy</h1>-->
+				<!--<img class="kingmix parallax" src="assets/img/kingmix.png" data-parallax="1500,1500">-->
+				<!--<img class="sax parallax" src="assets/img/sax.png" data-parallax="750,750">-->
+				<!--<img class="tone parallax" src="assets/img/tone.png" data-parallax="500,500">-->
+			<!--</div>-->
+			<!--<div id="/section-6/page-3" class="ft-page" data-id="page-3">-->
+				<!--<h1>This Page Is Just for Testing the Parallax</h1>-->
+				<!--<p>In the previous page, from left to right:</p>-->
+				<!--<dl>-->
+					<!--<dt>Sax:</dt>-->
+						<!--<dd>King Mix’s most trusted servant. After a diploma in the music conservatory in the…</dd>-->
+					<!--<dt>King Mix:</dt>-->
+						<!--<dd>son of the noble dynasty of the Mix of Censor, he soon shows his…</dd>-->
+					<!--<dt>Tone:</dt>-->
+						<!--<dd>the most feared space intruder on Mixer. He flunked the musical exam…</dd>-->
+				<!--</dl>-->
+				<!--<p>More info about this villains on <a href="http://www.genereavventura.com" target="_blank">www.genereavventura.com</a>.-->
+			<!--</div>-->
+		<!--</div>-->
+
+		<!--<div class="ft-section" data-id="section-7">-->
+			<!--<div id="/section-7/page-1" class="ft-page" data-id="page-1">-->
+				<!--<h1>Code Snippets Highlight</h1>-->
+				<!--<p>Code highlight is a courtesy of <a href="http://prismjs.com/" target="_blank">Lea Verou’s Prism</a>.<br>Because I really didn’t want to re-invent the wheel.<br><span class="small">You can use what you want, it’s not a dependency (but it’s very smart and cool).</span></p>-->
+				<!--<pre><code class="language-javascript">function saySomethingSmart()-->
+<!--{-->
+	<!--alert("The bad craftsman blames his tools!");-->
+<!--}</code></pre>-->
+				<!--<pre><code class="language-css">.is-not-water {-->
+	<!--display: inline-block;-->
+<!--}</code></pre>-->
+				<!--<pre><code class="language-markup">&lt;h1&gt;The Bad Craftsman Blames His Tools!&lt;/h1&gt;</code></pre>-->
+			<!--</div>-->
+
+			<!--<div id="/section-7/page-2" class="ft-page" data-id="page-2">-->
+				<!--<h1>Events and Custom Implementations</h1>-->
+				<!--<p>When navigated to a page Flowtime.js fires a custom <code>flowtimenavigation</code> event full of useful properties to customize or build your components or behaviours.</p>-->
+				<!--<p>Read the <a href="https://github.com/marcolago/flowtime.js" target="_blank">documentation</a> to learn more about this event and its properties.</p>-->
+			<!--</div>-->
+		<!--</div>-->
+
+		<!--<div class="ft-section" data-id="section-8">-->
+			<!--<div id="/section-8/page-1" class="ft-page" data-id="page-1">-->
+				<!--<h1>Some Examples</h1>-->
+				<!--<p>You can take a look at some examples to explore some of the possibilities that Flowtime.js offers to customize your experience.</p>-->
+				<!--<ul>-->
+					<!--<li><a href="http://marcolago.github.io/flowtime.js/examples/cross-direction/" target="_blank">Cross Direction</a></li>-->
+					<!--<li><a href="http://marcolago.github.io/flowtime.js/examples/custom-fragment-animations/" target="_blank">Custom Fragment Animations</a></li>-->
+					<!--<li><a href="http://marcolago.github.io/flowtime.js/examples/duplicated-id/" target="_blank">Duplicated IDs</a></li>-->
+					<!--<li><a href="http://marcolago.github.io/flowtime.js/examples/modal-overlay/" target="_blank">Modal Overlay</a></li>-->
+					<!--<li><a href="http://marcolago.github.io/flowtime.js/examples/page-titles-in-navigation/" target="_blank">Page Titles in Navigation</a></li>-->
+					<!--<li><a href="http://marcolago.github.io/flowtime.js/examples/scroll-the-section/" target="_blank">Scroll the Current Section Only</a></li>-->
+					<!--<li><a href="http://marcolago.github.io/flowtime.js/examples/sub-pages-demo/" target="_blank">Sub Pages Demo</a></li>-->
+					<!--<li><a href="http://marcolago.github.io/flowtime.js/examples/video/" target="_blank">Video Embedding and Controls</a></li>-->
+				<!--</ul>-->
+				<!--<p>Continues …</p>-->
+			<!--</div>-->
+
+			<!--<div id="/section-8/page-2" class="ft-page" data-id="page-2">-->
+				<!--<h1>More Examples</h1>-->
+				<!--<ul>-->
+					<!--<li><a href="http://marcolago.github.io/flowtime.js/examples/section-navigation-options/default/" target="_blank">Default Behavior;</a></li>-->
+					<!--<li><a href="http://marcolago.github.io/flowtime.js/examples/section-navigation-options/grid-navigation-false/" target="_blank">gridNavigation(false);</a></li>-->
+					<!--<li><a href="http://marcolago.github.io/flowtime.js/examples/section-navigation-options/nearest-page-to-top/" target="_blank">nearestPageToTop(true);</a></li>-->
+					<!--<li><a href="http://marcolago.github.io/flowtime.js/examples/section-navigation-options/remember-sections-last-page/" target="_blank">rememberSectionsLastPage(true);</a></li>-->
+					<!--<li><a href="http://marcolago.github.io/flowtime.js/examples/section-navigation-options/remember-sections-status/" target="_blank">rememberSectionsStatus(true);</a></li>-->
+				<!--</ul>-->
+				<!--<p>If you need a specific example or if you have a question about a feature feel free to ask or <a href="https://github.com/marcolago/flowtime.js/issues" target="_blank">open an issue</a>.</p>-->
+			<!--</div>-->
+		<!--</div>-->
+
+		<!--<div class="ft-section" data-id="section-9">-->
+			<!--<div id="/section-9/page-1" class="ft-page" data-id="page-1">-->
+				<!--<h1>Use It! It’s Free</h1>-->
+				<!--<p>This project is open source, feel free to contribute to the development on <a href="https://github.com/marcolago/flowtime.js" target="_blank">Github</a>.</p>-->
+				<!--<p>Feedbacks, suggestions and bug reports are welcomes.</p>-->
+				<!--<p>Use it as you wish and build great things.<br>And when you’ll have done let me know the URL, I will appreciate it.</p>-->
+			<!--</div>-->
+
+			<!--<div id="/section-9/page-2" class="ft-page" data-id="page-2">-->
+				<!--<h1>Thank You</h1>-->
+				<!--<p>Designed and coded by Marco Lago<br>-->
+					<!--Interaction/Experience/Game/Designer/Developer</p>-->
+				<!--<p>You can find me on Twitter as <a href="https://twitter.com/marcolago" target="_blank">@marcolago</a></p>-->
+				<!--<p>If you like this work spread the word, you know how ;)</p>-->
+				<!--<h2>Have Fun</h2>-->
+			<!--</div>-->
+		<!--</div>-->
+	</div>
+
+
+	<script src="js/brav1toolbox.js"></script>
+	<script src="js/flowtime.js"></script>
+	<script src="assets/js/prism.js"></script>
+
+	<script type="text/javascript">
+		var cacheTitle = document.title.replace("Flowtime.js | ", "");
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'CHANGEME']);
+		_gaq.push(['_trackPageview']);
+		_gaq.push(['_trackEvent', 'Flowtime', 'Landing', document.title]);
+		(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+
+		// Configuration API test
+		Flowtime.showProgress(true);
+		// Flowtime.fragmentsOnSide(true);
+		// Flowtime.fragmentsOnBack(true);
+		// Flowtime.useHistory(false);
+		// Flowtime.slideInPx(true);
+		// Flowtime.sectionsSlideToTop(true);
+		// Flowtime.backFromPageToTop(true);
+		// Flowtime.gridNavigation(false);
+		// Flowtime.useOverviewVariant(true);
+		Flowtime.parallaxInPx(true);
+		//
+		// event management
+		// Flowtime.addEventListener("flowtimenavigation", onNavigation, false);
+		Flowtime.onNavigation(onNavigation);
+		function onNavigation(e)
+		{
+			_gaq.push(['_trackEvent', 'Flowtime', 'Navigation', cacheTitle + ' > ' + document.title.replace("Flowtime.js | ", "")]);
+			// console.log(cacheTitle + ' > ' + document.title.replace("Flowtime.js | ", ""));
+			cacheTitle = document.title.replace("Flowtime.js | ", "");
+			console.log('section', e.section, 'sectionIndex', e.sectionIndex);
+			console.log('page', e.page, 'pageIndex', e.pageIndex);
+			console.log('pastSectionIndex', e.pastSectionIndex, 'pastPageIndex', e.pastPageIndex);
+			console.log('prevSection', e.prevSection);
+			console.log('nextSection', e.nextSection);
+			console.log('prevPage', e.prevPage);
+			console.log('nextPage', e.nextPage);
+			console.log('fragment', e.fragment, + 'fragmentIndex', e.fragmentIndex);
+			console.log("isOverview", e.isOverview);
+			console.log('progress:', e.progress, 'total:', e.total);
+			var value = Math.round(e.progress * 100 / e.total);
+			console.log('Completion: ' + value + '%');
+		}
+		// starts the application with configuration options
+		Flowtime.start();
+	</script>
+	<script type="text/javascript" src="http://slidemote.jit.su/slidemote.js#flowtime"></script>
+</body>
+</html>
