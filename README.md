@@ -1,3 +1,3 @@
 find out more:
-* [here](ohadpartuck.github.io)
-* and [here](ohadpartuck.github.io/filters_demo)
+* [here](ohadperry.github.io)
+* and [here](ohadperry.github.io/filters_demo)
