@@ -244,8 +244,7 @@ a:hover {
     float: left;
 }
 .skills {
-    float: left;
-    width: 45%;
+    width: 100%;
     padding: 0 0 25px 0;
 
 }
@@ -261,8 +260,7 @@ a:hover {
 }
 
 .skills ul li {
-    float: left;
-    display: block;
+    display: inline-block;
     clear: both;
     padding: 0;
     margin: 0;
@@ -275,7 +273,7 @@ a:hover {
 .skills li{
     background-color:#caced7;
     padding:2px 5px !important;
-    margin:4px 0 !important;
+    margin: 10px !important;
     color: #333;
     border-radius: 5px;
 }
@@ -310,6 +308,14 @@ a:hover {
 
     height: 400px;
     top: 40%;
+}
+
+.selected-work-item{
+    display: inline-block;
+    text-overflow: ellipsis;
+    height: 60px;
+    width: 60px;
+    border-radius: 5px
 }
 
 
