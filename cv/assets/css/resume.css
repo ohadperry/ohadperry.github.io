@@ -1,7 +1,7 @@
 
 body{
     background: url('../images/coolbg.jpg');
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 @font-face {
@@ -170,7 +170,7 @@ a:hover {
     border-radius: 5px;
     box-shadow: 5px 5px 5px gray;
     cursor: pointer;
-    margin:0 0 10px 0;
+    margin:20px 0 20px 0;
 
 }
 
@@ -201,7 +201,7 @@ a:hover {
 #ResumeContainer ul li{
     list-style: none;
     line-height: 18px;
-    font-size: 12px;
+    font-size: 15px;
     padding-left: 30px;
     margin-bottom: 12px;
     font-style: italic;
@@ -315,8 +315,39 @@ a:hover {
     text-overflow: ellipsis;
     height: 60px;
     width: 60px;
-    border-radius: 5px
+    border-radius: 5px;
+    text-align: center;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 5px;
+    margin: 10px auto;
 }
+
+.text-in-selected-work{
+    margin: 8px;
+}
+
+.black-text{
+    color: black;
+}
+
+.white-text{
+    color: white;
+}
+
+.box {
+    display: grid;
+    width: 95%;
+    grid-template-columns: 60px 60px 60px 60px 60px;
+    align-items: start;
+    justify-content: space-between;
+
+}
+
+.box :first-child {
+    align-self: center;
+}
+
 
 
 
