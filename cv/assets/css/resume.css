@@ -348,6 +348,15 @@ a:hover {
     align-self: center;
 }
 
+:root {
+    /* css variables are not supported in ie */
+    --resume-bllink-blue: #A8C0FF;
+    --resume-xapo-red: #db543f;
+    --resume-health-white: #fff;
+    --resume-fiverr-green: #1CBF73;
+    --resume-cbgn-gray: #EAEAEA;
+
+}
 
 
 
